@@ -318,14 +318,14 @@
           <!-- Login Form -->
           <form action="/authenticateClient" method="post">
             @csrf
-            <input type="text" id="login" class="fadeIn second" placeholder="login" name="username">
-            <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
-            <input type="submit" class="fadeIn fourth" value="Log In" style="background-color: #aa8453">
+            <input type="text" id="login" class="fadeIn second" placeholder="identifiant" name="username">
+            <input type="password" id="password" class="fadeIn third" name="password" placeholder=" mot de passe">
+            <input type="submit" class="fadeIn fourth" value="se connecter" style="background-color: #aa8453">
           </form>
       
           <!-- Remind Passowrd -->
           <div id="formFooter">
-            <a class="underlineHover" href="#">Forgot Password?</a>
+            <a class="underlineHover" href="#">Mot de passe oublié ?</a>
           </div>
       
         </div>

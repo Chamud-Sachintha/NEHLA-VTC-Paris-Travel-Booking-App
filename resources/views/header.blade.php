@@ -16,8 +16,8 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a class="nav-link" href="/">@lang('auth.nav_home')</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('about-us', app()->getLocale()) }}">@lang('auth.nav_about')</a></li>
-                <li class="nav-item"><a class="nav-link" href="/#ourVehicles">@lang('auth.nav_vehicles')</a></li>
-                <li class="nav-item"><a class="nav-link" href="/#specialTours">@lang('auth.nav_tours')</a></li>
+                <li class="nav-item"><a class="nav-link" href="/{{ app()->getLocale() }}/#ourVehicles">@lang('auth.nav_vehicles')</a></li>
+                <li class="nav-item"><a class="nav-link" href="/{{ app()->getLocale() }}/#specialTours">@lang('auth.nav_tours')</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('contact-us', app()->getLocale()) }}">@lang('auth.nav_contact')</a></li>
                 
                 <li class="nav-item">

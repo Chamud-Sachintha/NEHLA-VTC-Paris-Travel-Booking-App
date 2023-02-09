@@ -17,8 +17,11 @@ class CreateDestinationsTable extends Migration
             $table->id();
             $table->string('place_name');
             $table->string('description');
-            $table->string('image');
-            $table->string('price');
+            $table->string('price1');
+            $table->string('price2');
+            $table->string('price3');
+            // $table->string('image');
+            // $table->string('price');
             
             $table->timestamps();
         });

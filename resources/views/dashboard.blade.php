@@ -18,21 +18,61 @@
         {{ View::make('admin_panel') }}
         <div id="content" class="p-4 p-md-5 pt-5">
             <h2 class="mb-4">Dashboard</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
+            <hr>
+            <div class="row">
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col text-center">
+                                <h3>New Orders</h3>
+                            </div>
+                            <div class="col text-center">
+                                <img src="https://img.icons8.com/color-glass/96/null/new.png"/>
+                            </div>
+                            <div class="col text-center mt-3">
+                                <h5>3</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col text-center">
+                                <h3>Complete Orders</h3>
+                            </div>
+                            <div class="col text-center">
+                                <img src="https://img.icons8.com/stickers/96/null/checked-radio-button.png"/>
+                            </div>
+                            <div class="col text-center mt-3">
+                                <h5>3</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col text-center">
+                                <h3>Destinations</h3>
+                            </div>
+                            <div class="col text-center">
+                                <img src="https://img.icons8.com/external-smashingstocks-circular-smashing-stocks/96/null/external-Locations-maps-and-navigation-smashingstocks-circular-smashing-stocks.png"/>
+                            </div>
+                            <div class="col text-center mt-3">
+                                <h5>3</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <script src="admin/js/jquery.min.js"></script>
-    <script src="admin/js/popper.js"></script>
-    <script src="admin/js/bootstrap.min.js"></script>
-    <script src="admin/js/main.js"></script>
+    <script src="{{asset('admin/js/jquery.min.js')}}"></script>
+    <script src="{{asset('admin/js/popper.js')}}"></script>
+    <script src="{{asset('admin/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('admin/js/main.js')}}"></script>
 </body>

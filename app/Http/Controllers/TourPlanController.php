@@ -196,14 +196,14 @@ class TourPlanController extends Controller
                     'title'=>'Le Tour de Normandie',
                     'descriptions'=>[
                         'La Normandie compte plusieurs lieux et traditions classés ou inscrits au patrimoine mondial de l\'UNESCO, mais aussi des villages classés parmi les "Plus beaux villages de France" et des stations thermales. Au-delà de ces sites remarquables, et de nombreux détours magnifiques, chaque ville et village de Normandie est à découvrir !',
-                        'NEHLA VTC PARIS vous propose de vous emmener visiter cette ville riche en histoire. Nous vous proposons de visiter les lieux touristiques les plus célèbres ou vous pouvez également sélectionner vous-même les sites que vous souhaitez visiter. Nous sommes à votre disposition pour vous envoyer un devis personnalisé, il vous suffit de nous indiquer le nombre de passagers, la durée de l\'excursion et les lieux touristiques que vous souhaitez absolument voir. Vous recevrez un devis sous 24h. Alors n\'attendez plus et adressez-nous votre demande sur contact@nehlavtcparis.com'
+                        'NEHLA VTC PARIS vous propose de vous emmener voir cette ville riche en histoire. Nous vous proposons de vous faire visiter les lieux touristiques les plus célèbres ou bien vous pouvez également vous même sélectionner les sites que vous souhaitez visiter. Nous sommes à votre disposition pour vous envoyer un devis personnalisé, il vous suffit de nous indiquer le nombre de passagers, la durée de l\'excursion et les lieux touristiques que vous souhaitez absolument voir. Vous recevrez un devis sous 24h. Alors n\'attendez plus et adressez-nous votre demande sur contact@nehlavtcparis.com '
                     ],
                     'place_title'=>'LES SITES LES PLUS CONNUS DE NORMANDIE',
                     'place_description'=>'Du Mont-Saint-Michel au Tréport, de Cherbourg à Alençon, la Normandie offre une fantastique mosaïque de paysages. Explorez des lieux chargés d\'histoire, profitez de grands espaces et rencontrez la population locale.',
                     'places'=>[
                         [
                             'name'=>'1. Les falaises d\'Étretat',
-                            'description'=>'Le temps, les tempêtes et une rivière souterraine ont sculpté dans la craie le site naturel le plus célèbre de Normandie : des falaises d\'un blanc immaculé auxquelles l\'érosion a donné des formes spectaculaires, inspirant peintres et visiteurs. Le site, sillonné de sentiers pédestres, est une escapade idéale pour ceux qui souhaitent prendre un bol d\'air frais. Un conseil : évitez les ponts de printemps et le plein été, lorsque les falaises sont surpeuplées.',
+                            'description'=>'Le temps, les tempêtes et une rivière souterraine ont sculpté dans la craie le site naturel le plus célèbre de Normandie : des falaises d\'un blanc immaculé auxquelles l\'érosion a donné des formes spectaculaires, inspirant peintres et visiteurs. Le site, sillonné de sentiers pédestres, est une escapade idéale pour ceux qui souhaitent prendre un bol d\'air frais. ',
                             'advice'=>null
                         ],
                         [
@@ -213,17 +213,17 @@ class TourPlanController extends Controller
                         ],
                         [
                             'name'=>'3. Mont Saint-Michel',
-                            'description'=>'Un village, une abbaye et un site naturel fondus dans une harmonieuse unité de lieu, des constructions humaines sublimement mises en scène par la nature, un décor qui évolue au gré des mouvements des nuages, des marées, du soleil et du sable... le Mont- Saint-Michel, c\'est tout cela à la fois. L\'un des sites touristiques les plus visités de France, inscrit sur la liste du patrimoine mondial de l\'UNESCO depuis 1979, le Mont est un lieu à apprécier pleinement et à préserver, envers et contre tout.',
+                            'description'=>'Un village, une abbaye et un site naturel fondus dans une harmonieuse unité de lieu, des constructions humaines sublimement mises en scène par la nature, un décor qui évolue au gré des mouvements des nuages, des marées, du soleil et du sable... le Mont-Saint-Michel, c\'est tout cela à la fois. L\'un des sites touristiques les plus visités de France, inscrit sur la liste du patrimoine mondial de l\'UNESCO depuis 1979, le Mont est un lieu à apprécier pleinement et à préserver, envers et contre tout…',
                             'advice'=>null
                         ],
                         [
                             'name'=>'4. Honfleur',
-                            'description'=>'La première vision est une image de carte postale : des maisons d\'ardoise se reflétant dans les eaux paisibles du Vieux Bassin. Mais le port d\'où Samuel de Champlain a navigué pour fonder la ville de Québec est plus que cela. A la fois normande et parisienne, de plus en plus fréquentée par ses voisins belges et britanniques, Honfleur parvient à rester traditionnelle tout en étant bien ancrée dans son époque. La ville est aussi touristique le week-end et pendant les mois d\'été que paisible la semaine hors saison',
+                            'description'=>'La première vision est une image de carte postale : des maisons d\'ardoise se reflétant dans les eaux paisibles du Vieux Bassin. Mais le port d\'où Samuel de Champlain a navigué pour fonder la ville de Québec est plus que cela. A la fois normande et parisienne, de plus en plus fréquentée par ses voisins belges et britanniques, Honfleur parvient à rester traditionnelle tout en étant bien ancrée dans son époque. La ville est aussi touristique le week-end et pendant les mois d\'été que paisible la semaine hors saison.',
                             'advice'=>null
                         ],
                         [
                             'name'=>'5. Deauville–Trouville',
-                            'description'=>'Seulement séparées par le lit de la Touques, Deauville la mondaine et Trouville la familiale forment un univers à part. D\'un côté, une station balnéaire créée par des notables parisiens et autoproclamée « 21e arrondissement de Paris » ; de l\'autre, un port normand découvert par les artistes et popularisé par la mode des bains de mer et des congés payés. Chacun trouvera son bonheur dans l\'un ou l\'autre.',
+                            'description'=>'Seulement séparées par le lit des Touques, Deauville la mondaine et Trouville la familiale forment un univers à part. D\'un côté, une station balnéaire créée par des notables parisiens et autoproclamée « 21e arrondissement de Paris » ; de l\'autre, un port normand découvert par les artistes et popularisé par la mode des bains de mer et des congés payés. Chacun trouvera son bonheur dans l\'un ou l\'autre.',
                             'advice'=>null
                         ],
                         [
@@ -233,7 +233,7 @@ class TourPlanController extends Controller
                         ],
                         [
                             'name'=>'7. Bayeux',
-                            'description'=>'Miraculeusement épargnée par les bombardements de 1944, Bayeux a su garder son caractère malgré le passage des siècles et des armées. Autrefois l\'une des villes phares du Duché de Normandie, elle attire les visiteurs par l\'atmosphère de ses ruelles, ses monuments historiques et ses lieux de mémoire liés à la Seconde Guerre mondiale, mais aussi et surtout par son étonnante tapisserie (en fait une broderie), long de 70 m, témoignage saisissant de l\'histoire normande inscrite au patrimoine mondial de l\'UNESCO.',
+                            'description'=>'Miraculeusement épargnée par les bombardements de 1944, Bayeux a su garder son caractère malgré le passage des siècles et des armées. Autrefois l\'une des villes phares du Duché de Normandie, elle attire les visiteurs par l\'ambiance de ses ruelles, ses monuments historiques et ses lieux de mémoire liés à la Seconde Guerre mondiale, mais aussi et surtout par son étonnante tapisserie (en fait une broderie), long de 70 m, témoignage saisissant de l\'histoire normande inscrite sur la liste du patrimoine mondial de l\'UNESCO',
                             'advice'=>null
                         ],
                         [
@@ -247,29 +247,28 @@ class TourPlanController extends Controller
                             'advice'=>null
                         ],
                         [
-                            'name'=>'10. The landing beaches',
-                            'description'=>'Elles ne forment pas le littoral le plus attractif de Normandie, mais les plages choisies pour le débarquement allié en juin 1944 comptent néanmoins parmi les sites les plus fascinants de la région. Replongeant le visiteur dans l\'un des épisodes les plus glorieux et dramatiques de l\'histoire du XXe siècle, ces lieux de mémoire ne laissent personne indifférent. De la Côte de Nacre au début du Cotentin, chaque plage, site, mémorial et cimetière raconte une histoire humaine particulière.',
+                            'name'=>'10. Les plages du débarquement',
+                            'description'=>'Elles ne forment pas le littoral le plus attractif de Normandie, mais les plages choisies pour le débarquement allié en juin 1944 comptent néanmoins parmi les sites les plus fascinants de la région. Replongeant le visiteur dans l\'un des épisodes les plus glorieux et les plus dramatiques de l\'histoire du XXe siècle, ces lieux de mémoire ne laissent personne indifférent. De la Côte de Nacre au début du Cotentin, chaque plage, site, mémorial et cimetière raconte une histoire humaine particulière.',
                             'advice'=>null
                         ],
                         [
                             'name'=>'11. Cherbourg',
-                            'description'=>'Cherbourg a le goût des records : non content d\'avoir la plus grande rade artificielle du monde - 1 500 ha protégés par une digue de 4 km -, le port s\'est offert l\'aquarium le plus profond d\'Europe (11 m), dont la Cité de la Mer se dévoile aux yeux ravis des visiteurs, tandis que Le Redoutable, autre attraction de ce musée océanographique, est le plus grand sous-marin ouvert au public.',
+                            'description'=>'Cherbourg a le goût des records : non content d\'avoir la plus grande rade artificielle du monde - 1 500 ha protégés par une digue de 4 km -, le port s\'est offert l\'aquarium le plus profond d\'Europe (11 m), que la Cité de la Mer dévoile aux yeux ravis des visiteurs, tandis que la redoutable, autre attraction de ce musée océanographique, est le plus grand sous-marin ouvert au public.',
                             'advice'=>null
                         ],
                         [
                             'name'=>'12. Le Bec-Hellouin',
-                            'description'=>'A l\'approche du Bec-Hellouin, seule la tour Saint-Nicolas, vestige d\'une immense église, se détache des arbres qui entourent l\'abbaye nichée dans la vallée verdoyante. Fondée en 1034, elle fut un haut lieu de la vie intellectuelle et théologique au Moyen Âge : une histoire quasi millénaire, interrompue par la Révolution, restaurée et agrandie par une nouvelle communauté monastique depuis 1948. Un séjour au Bec-Hellouin permet d\'apprécier le calme ressourçant du village fleuri, d\'à peine plus de 400 habitants, dont les petites maisons à colombages traversent les siècles au rythme paisible des cloches de l\'abbaye',
+                            'description'=>'A l\'approche du Bec-Hellouin, seule la tour Saint-Nicolas, vestige d\'une immense église, se détache des arbres qui entourent l\'abbaye nichée dans la vallée verdoyante. Fondée en 1034, elle fut un haut lieu de la vie intellectuelle et théologique au Moyen Âge : une histoire quasi millénaire, interrompue par la Révolution, restaurée et agrandie par une nouvelle communauté monastique depuis 1948. Un séjour au Bec-Hellouin permet d\'apprécier le calme ressourçant du village fleuri, d\'à peine plus de 400 habitants, dont les petites maisons à colombages traversent les siècles au rythme paisible des cloches de l\'abbaye.',
                             'advice'=>null
                         ],
                         [
-                            'name'=>'13. Granville and the Chausey Islands',
-                            'description'=>'La Normandie a aussi son « rocher » : entourée de remparts romantiques et ayant compté Christian Dior parmi ses prestigieux habitants, qui y ont laissé un superbe musée, Granville est aussi la porte d\'entrée du plus grand archipel d\'Europe. Le nombre d\'îles Chausey varierait de 52 à marée haute à 365 à marée basse, soit le nombre de semaines et de jours dans une année... Une terre de poésie profonde, écorchée vive, et fréquentée tout autant par les pêcheurs pour son abondante poissons que par les carrières pour son granit… et par 200 espèces d\'oiseaux qui en font une zone protégée',
+                            'name'=>'13. Granville et les îles Chausey',
+                            'description'=>'La Normandie a aussi son « rocher » : entourée de remparts romantiques et ayant compté Christian Dior parmi ses prestigieux habitants, qui y ont laissé un superbe musée, Granville est aussi la porte d\'entrée du plus grand archipel d\'Europe. Le nombre d\'îles Chausey varierait de 52 à marée haute à 365 à marée basse, soit le nombre de semaines et de jours dans une année',
                             'advice'=>null
                         ],
                         [
                             'name'=>'14. Dieppe',
-                            'description'=>'L\'essayer, c\'est l\'adopter, disent ses fans. Dieppe méconnue ne manque en effet pas d\'attraits. Outre son ambiance qui sait être à la fois port et station balnéaire, et ses activités sur terre et sur mer, la ville se distingue par son patrimoine : cœur historique en partie piétonnier, superbe église Saint-Jacques, quartier du Pollet aux vieilles maisons de pêcheurs en briques... Ajoutons une arme secrète de la ville et de ses environs : les ciels qui ont inspiré les plus grands artistes, notamment Delacroix et Monet',
-                            'advice'=>null
+                            'description'=>'Le tenter, c\'est l\'adopter, disent ses fans. Dieppe méconnue ne manque en effet pas d\'attraits. Outre son ambiance qui sait être à la fois port et station balnéaire, et ses activités sur terre et sur mer, la ville se distingue par son patrimoine : cœur historique en partie piétonnier, superbe église Saint-Jacques, quartier du Pollet aux vieilles maisons de pêcheurs en briques… Ajoutons une arme secrète de la ville et de ses environs : les ciels qui ont inspiré les plus grands artistes, notamment Delacroix et Monet.',
                         ],
                         [
                             'name'=>'15. Barfleur',
@@ -283,16 +282,17 @@ class TourPlanController extends Controller
                     'image'=>'3_2.jpg',
                     'title'=>'La tournée européenne',
                     'descriptions'=>[
-                        'Envisagez-vous de vous lancer dans l\'une des aventures les plus exotiques à travers un tour d\'Europe ? Qu\'il s\'agisse d\'un projet réfléchi ou d\'une envie soudaine, vous souhaitez partir à l\'aventure sur les routes européennes ? NEHLA VTC PARIS vous propose de vous y accompagner en van ou en voiture selon vos besoins. Le continent recèle une grande diversité de paysages à couper le souffle. Faire un road trip en Europe permet de les explorer en toute liberté : arrêtez-vous où bon vous semble et récupérez le voyage. Éveillez votre curiosité et sortez des sentiers battus lors d\'un road trip en Europe.',
-                        'Envoyez-nous votre demande par email en précisant le nombre de passagers, la durée du séjour et l\'itinéraire que vous souhaitez suivre en indiquant les pays qui vous plairont le plus. Nous analyserons votre demande et nous vous proposerons le meilleur itinéraire avec vos préférences et au meilleur prix. Si vous n\'avez aucune idée et que vous voulez vraiment partir à l\'aventure faites nous confiance et nous vous proposerons un itinéraire avec les incontournables à visiter adapté pour vous. Alors convaincu ? Écrivez-nous sur contact@nehlavtcparis.com '
+                        'Envisagez-vous de vous lancer dans l\'une des aventures les plus extraordinaires à travers un tour d\'Europe ? Qu\'il s\'agisse d\'un projet réfléchi ou d\'une envie soudaine, vous souhaitez partir à l\'aventure sur les routes européennes ? NEHLA VTC PARIS vous propose de vous y accompagner en van ou en voiture selon vos besoins. Le continent recèle une grande diversité de paysages à couper le souffle. Faire un road trip en Europe permet de les explorer en toute liberté : arrêtez-vous où bon vous semble et profitez du voyage. Éveillez votre curiosité et sortez des sentiers battus lors d\'un road trip en Europe.',
+                        'Envoyez-nous votre demande par email en précisant le nombre de passagers, la durée du séjour et l\'itinéraire que vous souhaitez suivre en indiquant les pays qui vous plaisent le plus.',
+                        'Nous analyserons votre demande et nous vous proposerons le meilleur itinéraire avec vos préférences et au meilleur prix. Si vous n\'avez aucune idée et que vous voulez vraiment partir à l\'aventure faites nous confiance et nous vous proposerons un itinéraire avec les incontournables à visiter adapté pour vous. Alors convaincu ? Écrivez-nous sur contact@nehlavtcparis.com'
                     ],
-                    'place_title'=>'QUELQUES IDÉES D\'ENDROITS POUR S\'ARRÊTER LORS D\'UN TOUR D\'EUROPE',
+                    'place_title'=>'Quelques suggestions de destination où s\'arrêter lors d\'un tour d\'Europe',
                     'place_description'=>null,
                     'places'=>[
                         [
-                            'name'=>'1.	The Amalfi Coast – Italy',
+                            'name'=>'1.	La Côte Amalfitaine – Italie',
                             'description'=>'La côte amalfitaine qui s\'étend de Sorrente à Salerne a la réputation d\'être l\'une des plus belles côtes d\'Europe. La route étroite serpente le long de la côte entre des montagnes escarpées d\'un côté et une mer cristalline de l\'autre. Tout au long de cette route vous trouverez de petits villages pittoresques perchés au bord de la falaise, et surtout vous serez confrontés à des paysages à couper le souffle. Au nord de Sorrente, vous trouverez la baie de Naples, Pompéi et le célèbre Vésuve.',
-                            'advice'=>'En juillet et août, attendez-vous à des embouteillages le long de la côte, la route étant étroite et sinueuse, et les touristes très nombreux.'
+                            'advice'=>': En juillet et août, attendez-vous à des embouteillages le long de la côte, la route étant étroite et sinueuse, et les touristes très nombreux.'
                         ],
                         [
                             'name'=>'2.	Finistere – France',
@@ -300,19 +300,19 @@ class TourPlanController extends Controller
                             'advice'=>null
                         ],
                         [
-                            'name'=>'3.	The Highland Coast – Scotland',
+                            'name'=>'3.	La côte des Highlands – Ecosse',
                             'description'=>'Un road trip en van à la découverte de l\'Ecosse, c\'est avant tout découvrir des paysages magiques, des lacs à perte de vue et des châteaux tous les 3 kilomètres. La côte ouest des Highlands est probablement le meilleur moyen de découvrir la véritable Écosse. Partez du sud où vous pourrez découvrir des fjords profonds pour aller vers le nord et sa grande nature sauvage. Sur la route vous découvrirez une multitude de châteaux et de petits villages reculés.',
                             'advice'=>'La météo écossaise est très capricieuse, prévoyez de quoi vous protéger de la pluie et du vent, et ce en toutes saisons, mais aussi de la crème solaire !'
                         ],
                         [
-                            'name'=>'4.	The Algarve Coast – Portugal',
-                            'description'=>'La côte amalfitaine qui s\'étend de Sorrente à Salerne a la réputation d\'être l\'une des plus belles côtes d\'Europe. La route étroite serpente le long de la côte entre des montagnes escarpées d\'un côté et une mer cristalline de l\'autre. Tout au long de cette route vous trouverez de petits villages pittoresques perchés au bord de la falaise, et surtout vous serez confrontés à des paysages à couper le souffle. Au nord de Sorrente, vous trouverez la baie de Naples, Pompéi et le célèbre Vésuve.',
-                            'advice'=>'Si vous le pouvez, visitez la région hors saison, la météo est généralement très agréable et le flux de touristes moins important.'
+                            'name'=>'4.	La côte de l\'Algarve - Portugal',
+                            'description'=>'Située à l\'extrême sud du Portugal, la côte de l\'Algarve offre un mélange de falaises majestueuses et de plages paradisiaques, ici l\'océan Atlantique prend des airs de Méditerranée. Prenez Faro comme point de départ et prenez le temps de visiter la capitale de l\'Algarve, une ville très pittoresque, notamment à l\'intérieur des murs de la vieille ville. Partez ensuite à la découverte de la côte environnante en direction de Lagos, avec le magnifique parc naturel de Ria Formosa, les célèbres falaises et grottes marines de l\'Algarve, et les petits villages de pêcheurs typiques de la région.',
+                            'advice'=>'Si vous le pouvez, visitez la région hors saison, la météo est généralement très agréable et le flux de touristes moins important'
                         ],
                         [
-                            'name'=>'5. The Great Lakes Region – Finland',
-                            'description'=>'Quand on pense à la Finlande, on pense instantanément à des forêts à perte de vue et à des chalets colorés au bord de lacs perdus ou de fjords. C\'est ce côté typique de la Finlande que nous vous invitons à explorer du côté de la région des Grands Lacs, située au sud du pays. Au départ d\'Helsinki, la capitale finlandaise, dirigez-vous vers l\'est et longez la côte pour découvrir les majestueux fjords ou pénétrez dans les terres pour découvrir les célèbres lacs. Le lac Saimaa, le plus grand lac de Finlande, est une destination de choix pour les activités de plein air et de nature.',
-                            'advice'=>'Partir en van aménagé est probablement le meilleur moyen de découvrir la Finlande, il est possible de s\'arrêter où l\'on veut, ou de choisir de passer la nuit dans une aire de camping dédiée.'
+                            'name'=>'5. La Région des Grands Lacs – Finlande',
+                            'description'=>'Quand on pense à la Finlande, on pense instantanément à des forêts à perte de vue et à des chalets colorés au bord de lacs perdus ou de fjords. C\'est ce côté typique de la Finlande que nous vous invitons à explorer du côté de la région des Grands Lacs, située au sud du pays. Au départ d\'Helsinki, la capitale finlandaise, dirigez-vous vers l\'est, et longez la côte pour découvrir les majestueux fjords ou pénétrez dans les terres pour découvrir les célèbres lacs. Le lac Saimaa, le plus grand lac de Finlande, est une destination de choix pour les activités de plein air et de nature.',
+                            'advice'=>null
                         ],
                     ]
                 ];
@@ -321,40 +321,41 @@ class TourPlanController extends Controller
                     'image'=>'2_3.jpg',
                     'title'=>'La visite de la ville de Paris',
                     'descriptions'=>[
-                        'Vivez une belle visite de Paris. Un tour de Paris en van ou en voiture est le tour idéal pour une première visite à Paris. Vous vivrez un moment extraordinaire lors d\'un tour de ville en voiture. Des vues panoramiques vous permettront de découvrir les sites parisiens incontournables, comme l\'Opéra Garnier, la Tour Eiffel, ou les Champs Elysées. Tout au long de cette visite, nous ferons des haltes afin que vous puissiez vous immerger au maximum dans l\'histoire des monuments et quartiers les plus célèbres de Paris, dans l\'ambiance de l\'époque',
-                        'Parmi les lieux que vous verrez devant vous, vous trouverez le Louvre, et celui d\'Orsay, le quartier animé de Saint Germain des Prés, la cathédrale Notre-Dame de Paris ou encore les librairies des bords de Seine reflétant le le vrai Paris.',
-                        'NEHLA VTC PARIS vous offre la possibilité de sélectionner des lieux spécifiques afin que l\'expérience soit réellement adaptée à votre demande et que vous repartiez pleinement satisfait. N\'hésitez pas à nous contacter par mail sur contact@nehlavtcparis.com en précisant le nombre de passagers et les quartiers ou monuments que vous souhaitez absolument voir ou faites nous confiance et nous vous proposerons une expérience complète dans la ville de Paris.'
+                        'Profitez d’une belle visite de Paris en van ou en voiture, un tour idéal pour une première visite à Paris !',
+                        'Vous vivrez un moment extraordinaire lors d\'un tour de Paris en voiture. Des vues panoramiques vous permettront de découvrir les sites parisiens incontournables, comme l\'Opéra Garnier, la Tour Eiffel, ou les Champs Elysées. Tout au long de cette visite, nous ferons des arrêts afin que vous puissiez vous immerger au maximum dans l\'histoire des monuments et quartiers les plus célèbres de Paris, dans l\'ambiance typique parisienne.',
+                        'Parmi les lieux incontournables que vous trouverez pendant la visite bien évidemment le très célèbre musée du Louvre, et celui d\'Orsay, le quartier animé de Saint Germain des Prés, la cathédrale Notre-Dame de Paris ou encore les librairies des bords de la Seine reflétant le vrai Paris.',
+                        'NEHLA VTC PARIS vous offre la possibilité de sélectionner des lieux spécifiques que vous souhaitez absolument voir afin que l\'expérience soit réellement adaptée à votre demande et que vous partiez pleinement satisfait. N\'hésitez pas à nous contacter par mail sur contact@nehlavtcparis.com en précisant le nombre de passagers et les quartiers ou monuments que vous souhaitez absolument voir ou bien faites nous confiance et nous vous proposerons une expérience complète dans la ville de Paris.'
                     ],
                     'place_title'=>'QUELQUES LIEUX INCONTOURNABLES A PARIS',
                     'place_description'=>null,
                     'places'=>[
                         [
-                            'name'=>'1.	Louvre Museum',
-                            'description'=>'Ancien palais des rois, le Louvre embrasse l\'histoire de France depuis huit siècles. Conçu depuis sa création en 1793 comme un musée universel, ses collections, qui comptent parmi les plus belles du monde, couvrent plusieurs millénaires et un territoire qui s\'étend de l\'Amérique aux confins de l\'Asie.',
+                            'name'=>'1.	Musée du Louvre',
+                            'description'=>'Ancien palais des rois, le Louvre embrasse l\'histoire de France depuis huit siècles. Conçu depuis sa création en 1793 comme un musée universel, ses collections, parmi les plus belles du monde, couvrent plusieurs millénaires et un territoire qui s\'étend de l\'Amérique aux confins de l\'Asie.',
                             'advice'=>null
                         ],
                         [
-                            'name'=>'2.	Orsay Museum',
-                            'description'=>'Connu dans le monde entier pour sa riche collection d\'art impressionniste, le musée d\'Orsay est aussi le musée de toute la création artistique du monde occidental de 1848 à 1914. Ses collections représentent toutes les formes d\'expression, de la peinture à l\'architecture, en passant par la sculpture, la décoration arts, photographie. Vous ne manquerez pas non plus d\'être éblouis par la beauté des lieux : une gare aux allures de palais inaugurée pour l\'Exposition universelle de 1900.',
+                            'name'=>'2.	Musée d\'Orsay',
+                            'description'=>'Connu dans le monde entier pour sa riche collection d\'art impressionniste, le musée d\'Orsay est aussi le musée de toute la création artistique du monde occidental de 1848 à 1914. Ses collections représentent toutes les formes d\'expression, de la peinture à l\'architecture, en passant par la sculpture, les arts décoratifs, la photographie. Vous ne manquerez pas non plus d\'être éblouis par la beauté des lieux : une gare aux allures de palais inaugurée pour l\'Exposition universelle de 1900.',
                             'advice'=>null
                         ],
                         [
-                            'name'=>'3.	Notre-Dame de Paris cathedral',
+                            'name'=>'3.	Cathédrale Notre-Dame de Paris',
                             'description'=>'La cathédrale Notre-Dame de Paris, chef-d\'œuvre de l\'architecture gothique, est le monument le plus visité de France. Situé dans le centre historique de Paris, au bout de l\'Ile de la Cité, sa construction débute au Moyen Âge.',
                             'advice'=>null
                         ],
                         [
-                            'name'=>'4.	Eiffel Tower',
-                            'description'=>'Symbole de Paris et plus largement de la France, la Tour Eiffel a été construite par Gustave Eiffel pour l\'Exposition Universelle de 1889. C\'est l\'un des monuments les plus visités au monde. De la découverte des jardins historiques à la vue éblouissante sur Paris depuis du sommet, découvrir la Tour est une émotion incroyable.',
+                            'name'=>'4.	Tour Eiffel',
+                            'description'=>'Symbole de Paris et plus largement de la France, la Tour Eiffel a été construite par Gustave Eiffel pour l\'Exposition Universelle de 1889. C\'est l\'un des monuments les plus visités au monde. De la découverte des jardins historiques à la vue éblouissante sur Paris du haut, découvrir la Tour est une émotion incroyable.',
                             'advice'=>null
                         ],
                         [
-                            'name'=>'5.	Triumphal arch',
+                            'name'=>'5.	Arc de Triomphe',
                             'description'=>'Une vue unique sur les Champs Élysées, la plus belle avenue du monde. Il abrite la tombe du soldat inconnu dont la flamme se rallume chaque soir. De la terrasse, vous pourrez admirer, de jour comme de nuit, un panorama unique sur les Champs Élysées.',
                             'advice'=>null
                         ],
                         [
-                            'name'=>'6.	Big palace',
+                            'name'=>'6.	Le Grand Palais',
                             'description'=>'Le Grand Palais est l\'un des monuments parisiens les plus emblématiques. Construite pour l\'Exposition universelle de 1900, elle est reconnaissable à sa grande coupole de verre flanquée du drapeau français.',
                             'advice'=>null
                         ],

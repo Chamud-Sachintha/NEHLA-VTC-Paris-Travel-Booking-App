@@ -38,7 +38,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-left caption mt-90">
-                    <h5>@lang('auth.get_in_touch')</h5>
+                    {{-- <h5>@lang('auth.get_in_touch')</h5> --}}
                     <h1>@lang('auth.contact_us')</h1>
                 </div>
             </div>
@@ -86,23 +86,23 @@
                         <!-- form elements -->
                         <div class="row">
                             <div class="col-md-6 form-group">
-                                <input name="name" type="text" placeholder="Your Name *" required>
+                                <input name="name" type="text" placeholder="@lang('auth.form_name') *" required>
                             </div>
                             <div class="col-md-6 form-group">
-                                <input name="email" type="email" placeholder="Your Email *" required>
+                                <input name="email" type="email" placeholder="@lang('auth.form_email') *" required>
                             </div>
                             <div class="col-md-6 form-group">
-                                <input name="phone" type="text" placeholder="Your Number *" required>
+                                <input name="phone" type="text" placeholder="@lang('auth.form_mobile') *" required>
                             </div>
                             <div class="col-md-6 form-group">
-                                <input name="subject" type="text" placeholder="Subject *" required>
+                                <input name="subject" type="text" placeholder="@lang('auth.subject') *" required>
                             </div>
                             <div class="col-md-12 form-group">
-                                <textarea name="message" id="message" cols="30" rows="4" placeholder="Message *" required></textarea>
+                                <textarea name="message" id="message" cols="30" rows="4" placeholder="@lang('auth.message') *" required></textarea>
                             </div>
                             <div class="col-md-12">
                                 {{-- <button class="butn-dark"><a href="#0"><span>Send Message</span></a></button> --}}
-                                <input type="submit" class="butn-dark" value="Send Message">
+                                <input type="submit" class="butn-dark" value="@lang('auth.send_message')">
                             </div>
                         </div>
                     </form>

@@ -9,8 +9,8 @@
     <link rel="shortcut icon" href="images/favicon.png">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Barlow&amp;family=Barlow+Condensed&amp;family=Gilda+Display&amp;display=swap">
-    <link rel="stylesheet" href="css/plugins.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{asset('css/plugins.css')}}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('vehicle_popup/css/style.css')}}">
@@ -424,74 +424,7 @@
             </a>
         </div>
     </header>
-    <!-- Booking Search -->
-    {{-- <div class="booking-wrapper">
-        <div class="container">
-            <div class="booking-inner clearfix">
-                <form action="rooms.html" class="form1 clearfix">
-                    <div class="col1 c1">
-                        <div class="input1_wrapper">
-                            <label>Check in</label>
-                            <div class="input1_inner">
-                                <input type="text" class="form-control input datepicker" placeholder="Check in">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col1 c2">
-                        <div class="input1_wrapper">
-                            <label>Check out</label>
-                            <div class="input1_inner">
-                                <input type="text" class="form-control input datepicker" placeholder="Check out">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col2 c3">
-                        <div class="select1_wrapper">
-                            <label>Adults</label>
-                            <div class="select1_inner">
-                                <select class="select2 select" style="width: 100%">
-                                    <option value="1">1 Adult</option>
-                                    <option value="2">2 Adults</option>
-                                    <option value="3">3 Adults</option>
-                                    <option value="4">4 Adults</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col2 c4">
-                        <div class="select1_wrapper">
-                            <label>Children</label>
-                            <div class="select1_inner">
-                                <select class="select2 select" style="width: 100%">
-                                    <option value="1">Children</option>
-                                    <option value="1">1 Child</option>
-                                    <option value="2">2 Children</option>
-                                    <option value="3">3 Children</option>
-                                    <option value="4">4 Children</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col2 c5">
-                        <div class="select1_wrapper">
-                            <label>Rooms</label>
-                            <div class="select1_inner">
-                                <select class="select2 select" style="width: 100%">
-                                    <option value="1">1 Room</option>
-                                    <option value="2">2 Rooms</option>
-                                    <option value="3">3 Rooms</option>
-                                    <option value="4">4 Rooms</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col3 c6">
-                        <button type="submit" class="btn-form1-submit">Check Now</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div> --}}
+
     <!-- About -->
     <section class="about section-padding">
         <div class="container">
@@ -607,8 +540,8 @@
                                                     <div class="row">
                                                         <div class="col-12 mb-1" id="inverseFrom">
                                                             <label for="">@lang('auth.from') :</label>
-                                                            <input type="text" placeholder="Eg. Paris"
-                                                                class="form-control" id="from" name="from">
+                                                            <input type="text" placeholder="Ex. Paris"
+                                                                class="form-control" id="from" name="from" required>
                                                         </div>
                                                         <div class="col-12 text-center">
                                                             {{-- <input type="button" name="next" class="action-button" onclick="inverseLocations(); return false;" value="Next Step"> --}}
@@ -641,12 +574,12 @@
                                                             <td><label for="">@lang('auth.oneway')</label></td>
                                                             <td>
                                                                 <input type="radio" name="tripType" value="oneWay"
-                                                                    style="margin-top: 1.2rem">
+                                                                    style="margin-top: 1.2rem" id="ow">
                                                             </td>
                                                             <td><label for="">@lang('auth.return')</label></td>
                                                             <td>
                                                                 <input type="radio" name="tripType" value="return"
-                                                                    style="margin-top: 1.2rem">
+                                                                    style="margin-top: 1.2rem" id="rw">
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -654,30 +587,20 @@
                                                     <div class="row mt-2">
                                                         <div class="col-6">
                                                             <label for="">@lang('auth.passengers') :</label>
-                                                            <input type="text" class="form-control" placeholder="Eg. 3"
-                                                                id="passengers" name="passengers">
-                                                            {{-- <select class="form-select"
-                                                                aria-label="Default select example"
-                                                                style="height: 2.5rem" id="passengers"
-                                                                name="passengers">
-
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
-                                                            </select> --}}
+                                                            {{-- <input type="text" class="form-control" placeholder="Ex. 3"
+                                                                id="passengers" name="passengers"> --}}
+                                                            <select class="form-select" aria-label="Default select example"
+                                                                style="height: 2.5rem" id="passengers" name="passengers" onchange="onSelectPassengerRange()">
+                                                                <option value="0" selected>Select Passengers</option>
+                                                                <option value="1 à 3">1 à 3</option>
+                                                                <option value="4 à 5">4 à 5</option>
+                                                                <option value="6 à 7">6 à 7</option>
+                                                            </select>
                                                         </div>
                                                         <div class="col-6">
                                                             <label for="">@lang('auth.luggage') :</label>
-                                                            <input type="text" class="form-control" placeholder="EG. 3"
+                                                            <input type="text" class="form-control" placeholder="Ex. 3"
                                                                 id="luggage" name="luggage">
-                                                            {{-- <select class="form-select"
-                                                                aria-label="Default select example"
-                                                                style="height: 2.5rem" id="luggage" name="luggage">
-
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
-                                                            </select> --}}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -744,29 +667,29 @@
                                                 </div>
                                             </div>
 
-                                            <div class="row mt-2">
-                                                <div class="col-6" id="flightNumberParent">
-                                                    <label for="">@lang('auth.flight_number') :</label>
-                                                    <input type="text" class="form-control" placeholder="Eg. A0019OKIJU"
-                                                        id="flightNumber" name="flightNumber">
-                                                </div>
-                                                <div class="col-6">
-                                                    <label for="">@lang('auth.baby_seat') :</label>
-                                                    <input type="text" class="form-control" placeholder="Eg. 3"
-                                                        id="babySeat" name="babySeats">
-                                                </div>
-                                            </div>
-
-                                            <div class="row mt-2">
+                                            {{-- <div class="row mt-2">
                                                 <div class="col-6" style="display: none" id="returnFromHiddenEl">
                                                     <label for="">@lang('auth.return_from') :</label>
-                                                    <input type="text" placeholder="Eg. Kiribatgoda"
+                                                    <input type="text" placeholder="Ex. Paris"
                                                         class="form-control" id="returnFrom" name="returnFrom">
                                                 </div>
                                                 <div class="col-6" style="display: none" id="returnToHiddenEl">
                                                     <label for="">@lang('auth.return_to') :</label>
-                                                    <input type="text" placeholder="Eg. Kiribatgoda"
+                                                    <input type="text" placeholder="Ex. Paris"
                                                         class="form-control" id="returnTo" name="returnTo">
+                                                </div>
+                                            </div> --}}
+
+                                            <div class="row mt-2">
+                                                <div class="col-6" id="flightNumberParent">
+                                                    <label for="">@lang('auth.flight_number') :</label>
+                                                    <input type="text" class="form-control" placeholder="Ex. A0019OKIJU"
+                                                        id="flightNumber" name="flightNumber">
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for="">@lang('auth.baby_seat') :</label>
+                                                    <input type="text" class="form-control" placeholder="Ex. 3"
+                                                        id="babySeat" name="babySeats">
                                                 </div>
                                             </div>
 
@@ -796,7 +719,7 @@
                                                 </div> --}}
                                             </div>
                                         </div>
-                                        <input type="button" name="next" class="next action-button"
+                                        <input type="button" name="next" class="action-button checkFeilds"
                                             onclick="onClickNext()" value="@lang('auth.next')" />
                                     </fieldset>
                                     <fieldset>
@@ -804,10 +727,10 @@
                                             <div class="row">
                                                 <div class="col-md-6 col-lg-6 col-sm-12">
                                                     <h2 class="fs-title">@lang('auth.map')</h2>
-                                                    <div id="map" style="width: 280px; height: 360px;">
+                                                    <div id="map" style="width: 280px; height: 400px;">
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6 col-lg-6 col-sm-12">
+                                                <div class="col-lg-6 col-sm-12">
                                                     <h2 class="fs-title">@lang('auth.your_jurney')</h2>
 
                                                     <div class="row">
@@ -885,10 +808,10 @@
                                                             </div>
                                                             <div class="col-md-5 col-lg-5 col-sm-12">
                                                                 <h3 id="tmpName" class="section-title" style="font-size: 23px;">{{ $each_vehicle['brand']}}</h3>
-                                                                <p class="ms-3"><b>Model :- {{ $each_vehicle['model'] }}</b></p>
-                                                                <p class="ms-3"><b>Passengers :- {{ $each_vehicle['seats'] }}</b></p>
+                                                                <p class="ms-3"><b>@lang('auth.name') :- {{ $each_vehicle['model'] }}</b></p>
+                                                                <p class="ms-3"><b>@lang('auth.passengers') :- {{ $each_vehicle['seats'] }}</b></p>
                                                             </div>
-                                                            <div class="col-md-3 col-lg-3 col-sm-12">
+                                                            <div class="col-lg-3 col-sm-12">
                                                                 <input type="button" style="background-color: #8E6F45"
                                                                     class="action-button" id="{{ "buy" .
                                                                     $each_vehicle['id'] }}"
@@ -903,7 +826,7 @@
                                         </div>
                                         <input type="button" name="previous" class="previous action-button-previous"
                                             value="@lang('auth.previous')" />
-                                        <input type="button" name="next" class="next action-button" value="@lang('auth.next')" />
+                                        <input type="button" name="next" class="action-button checkVehicleSelected" value="@lang('auth.next')" />
                                     </fieldset>
                                     <fieldset>
                                         <div class="form-card">
@@ -914,7 +837,7 @@
                                                     <label for="">@lang('auth.promo_code_txt') :</label>
                                                 </div>
                                                 <div class="col-md-4 col-lg-4 col-sm-12">
-                                                    <input type="text" class="form-control" placeholder="Eg. PROMO001"
+                                                    <input type="text" class="form-control" placeholder="Ex. PROMO001"
                                                         id="promoCode">
                                                 </div>
                                                 <div class="col-md-4 col-lg-4 col-sm-12">
@@ -952,24 +875,24 @@
                                                     <div class="col-md-6 col-lg-6 col-sm-12">
                                                         <label for="">@lang('auth.fname') :</label>
                                                         <input type="text" class="form-control" name="fname"
-                                                            placeholder="Eg. Kamal" id="fname">
+                                                            placeholder="Ex. Kamal" id="fname">
                                                     </div>
                                                     <div class="col-md-6 col-lg-6 col-sm-12">
                                                         <label for="">@lang('auth.lname') :</label>
                                                         <input type="text" class="form-control" name="lname"
-                                                            placeholder="Eg. Nishantha" id="lname">
+                                                            placeholder="Ex. Nishantha" id="lname">
                                                     </div>
                                                 </div>
                                                 <div class="row mt-2">
                                                     <div class="col-md-6 col-lg-6 col-sm-12">
                                                         <label for="">@lang('auth.mobile') :</label>
                                                         <input type="text" class="form-control" name="mobileNumber"
-                                                            placeholder="Eg. Kamal" id="mobileNumber">
+                                                            placeholder="Ex. Kamal" id="mobileNumber">
                                                     </div>
                                                     <div class="col-md-6 col-lg-6 col-sm-12">
                                                         <label for="">@lang('auth.email') :</label>
                                                         <input type="text" class="form-control" name="emailAddress"
-                                                            placeholder="Eg. Nishantha" id="emailAddress">
+                                                            placeholder="Ex. Nishantha" id="emailAddress">
                                                     </div>
                                                 </div>
                                                 <div class="row mt-2">
@@ -989,7 +912,7 @@
                                             <div class="row mt-2" id="existingUser" style="display: none">
                                                 <div class="col-md-6 col-lg-6 col-sm-12">
                                                     <label for="">@lang('auth.user_email') :</label>
-                                                    <input type="text" class="form-control" placeholder="Eg. Kamal"
+                                                    <input type="text" class="form-control" placeholder="Ex. Kamal"
                                                         id="checkMail" name="checkMail">
                                                 </div>
                                             </div>
@@ -1124,131 +1047,7 @@
                     <div class="section-title">@lang('auth.sec_4_title')</div>
                 </div>
             </div>
-            <div class="row">
-                {{-- <div class="col-md-4">
-                    <div class="item">
-                        <div class="position-re o-hidden"> <img src="images/1_2.jpg" alt> </div> <span
-                            class="category"><a href="rooms2.html">Book</a></span>
-                        <div class="con">
-                            <h6><a href="room-details.html">150$ / Night</a></h6>
-                            <h5><a href="room-details.html">Junior Suite</a> </h5>
-                            <div class="line"></div>
-                            <div class="row facilities">
-                                <div class="col col-md-7">
-                                    <ul>
-                                        <li><i class="flaticon-bed"></i></li>
-                                        <li><i class="flaticon-bath"></i></li>
-                                        <li><i class="flaticon-breakfast"></i></li>
-                                        <li><i class="flaticon-towel"></i></li>
-                                    </ul>
-                                </div>
-                                <div class="col col-md-5 text-right">
-                                    <div class="permalink"><a href="room-details.html">Details <i
-                                                class="ti-arrow-right"></i></a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="item">
-                        <div class="position-re o-hidden"> <img src="images/2.jpg" alt> </div> <span class="category"><a
-                                href="rooms2.html">Book</a></span>
-                        <div class="con">
-                            <h6><a href="room-details.html">200$ / Night</a></h6>
-                            <h5><a href="room-details.html">Family Room</a></h5>
-                            <div class="line"></div>
-                            <div class="row facilities">
-                                <div class="col col-md-7">
-                                    <ul>
-                                        <li><i class="flaticon-bed"></i></li>
-                                        <li><i class="flaticon-bath"></i></li>
-                                        <li><i class="flaticon-breakfast"></i></li>
-                                        <li><i class="flaticon-towel"></i></li>
-                                    </ul>
-                                </div>
-                                <div class="col col-md-5 text-right">
-                                    <div class="permalink"><a href="room-details.html">Details <i
-                                                class="ti-arrow-right"></i></a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="item">
-                        <div class="position-re o-hidden"> <img src="images/3_1.jpg" alt> </div> <span
-                            class="category"><a href="rooms2.html">Book</a></span>
-                        <div class="con">
-                            <h6><a href="room-details.html">250$ / Night</a></h6>
-                            <h5><a href="room-details.html">Double Room</a></h5>
-                            <div class="line"></div>
-                            <div class="row facilities">
-                                <div class="col col-md-7">
-                                    <ul>
-                                        <li><i class="flaticon-bed"></i></li>
-                                        <li><i class="flaticon-bath"></i></li>
-                                        <li><i class="flaticon-breakfast"></i></li>
-                                        <li><i class="flaticon-towel"></i></li>
-                                    </ul>
-                                </div>
-                                <div class="col col-md-5 text-right">
-                                    <div class="permalink"><a href="room-details.html">Details <i
-                                                class="ti-arrow-right"></i></a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
-                {{-- <div class="col-md-6">
-                    <div class="item">
-                        <div class="position-re o-hidden"> <img src="{{asset('images/bg1.jpg')}}" alt> </div>
-                        <div class="con">
-                            <h6><a href="#" data-toggle="modal" data-target="#exampleModalCenter">300$ / Night</a></h6>
-                            <h5><a href="#" data-toggle="modal" data-target="#exampleModalCenter">Mercedes Class-S Series</a></h5>
-                            
-                            <div class="row facilities">
-                                <div class="col col-md-7">
-                                    <ul>
-                                        <li><i class="flaticon-bed"></i></li>
-                                        <li><i class="flaticon-bath"></i></li>
-                                        <li><i class="flaticon-breakfast"></i></li>
-                                        <li><i class="flaticon-towel"></i></li>
-                                    </ul>
-                                </div>
-                                <div class="col col-md-5 text-right">
-                                    <div class="permalink"><a href="#" data-toggle="modal" data-target="#exampleModalCenter">Details <i
-                                                class="ti-arrow-right"></i></a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="item">
-                        <div class="position-re o-hidden"> <img src="images/bg2.jpg" alt> </div>
-                        <div class="con">
-                            <h6><a href="#" data-toggle="modal" data-target="#exampleModalCenter">150$ / Night</a></h6>
-                            <h5><a href="#" data-toggle="modal" data-target="#exampleModalCenter">Mercedes Class-V Series</a></h5>
-                            
-                            <div class="row facilities">
-                                <div class="col col-md-7">
-                                    <ul>
-                                        <li><i class="flaticon-bed"></i></li>
-                                        <li><i class="flaticon-bath"></i></li>
-                                        <li><i class="flaticon-breakfast"></i></li>
-                                        <li><i class="flaticon-towel"></i></li>
-                                    </ul>
-                                </div>
-                                <div class="col col-md-5 text-right">
-                                    <div class="permalink"><a href="#" data-toggle="modal" data-target="#exampleModalCenter">Details <i
-                                                class="ti-arrow-right"></i></a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
-            </div>
+            
             <div class="row" style="margin-top: -10px;">
                 <div class="col-md-6 col-lg-6 col-sm-12">
                     <div class="position-re o-hidden"> <img src="{{asset('images/car2-flip.png')}}" alt style="max-width: 500px"> </div>
@@ -1316,105 +1115,7 @@
             </div>
         </div>
     </section>
-    <!-- Pricing -->
-    {{-- <section class="pricing section-padding bg-black">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="section-subtitle"><span>Best Prices</span></div>
-                    <div class="section-title"><span>Extra Services</span></div>
-                    <p class="color-2">The best prices for your relaxing vacation. The utanislen quam nestibulum ac
-                        quame odion elementum sceisue the aucan.</p>
-                    <p class="color-2">Orci varius natoque penatibus et magnis disney parturient monte nascete ridiculus
-                        mus nellen etesque habitant morbine.</p>
-                    <div class="reservations mb-30">
-                        <div class="icon"><span class="flaticon-call"></span></div>
-                        <div class="text">
-                            <p class="color-2">For information</p> <a href="tel:855-100-4444">855 100 4444</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <div class="owl-carousel owl-theme">
-                        <div class="pricing-card">
-                            <img src="images/1.jpg" alt>
-                            <div class="desc">
-                                <div class="name">Room cleaning</div>
-                                <div class="amount">$50<span>/ month</span></div>
-                                <ul class="list-unstyled list">
-                                    <li><i class="ti-check"></i> Hotel ut nisan the duru</li>
-                                    <li><i class="ti-check"></i> Orci miss natoque vasa ince</li>
-                                    <li><i class="ti-close unavailable"></i>Clean sorem ipsum morbin</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="pricing-card">
-                            <img src="images/2_1.jpg" alt>
-                            <div class="desc">
-                                <div class="name">Drinks included</div>
-                                <div class="amount">$30<span>/ daily</span></div>
-                                <ul class="list-unstyled list">
-                                    <li><i class="ti-check"></i> Hotel ut nisan the duru</li>
-                                    <li><i class="ti-check"></i> Orci miss natoque vasa ince</li>
-                                    <li><i class="ti-close unavailable"></i>Clean sorem ipsum morbin</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="pricing-card">
-                            <img src="images/3.jpg" alt>
-                            <div class="desc">
-                                <div class="name">Room Breakfast</div>
-                                <div class="amount">$30<span>/ daily</span></div>
-                                <ul class="list-unstyled list">
-                                    <li><i class="ti-check"></i> Hotel ut nisan the duru</li>
-                                    <li><i class="ti-check"></i> Orci miss natoque vasa ince</li>
-                                    <li><i class="ti-close unavailable"></i>Clean sorem ipsum morbin</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="pricing-card">
-                            <img src="images/4.jpg" alt>
-                            <div class="desc">
-                                <div class="name">Safe & Secure</div>
-                                <div class="amount">$15<span>/ daily</span></div>
-                                <ul class="list-unstyled list">
-                                    <li><i class="ti-check"></i> Hotel ut nisan the duru</li>
-                                    <li><i class="ti-check"></i> Orci miss natoque vasa ince</li>
-                                    <li><i class="ti-close unavailable"></i>Clean sorem ipsum morbin</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-    <!-- Promo Video -->
-    {{-- <section class="video-wrapper video section-padding bg-img bg-fixed" data-overlay-dark="3"
-        data-background="img/slider/2.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 offset-md-2 text-center">
-                    <span><i class="star-rating"></i><i class="star-rating"></i><i class="star-rating"></i><i
-                            class="star-rating"></i><i class="star-rating"></i></span>
-                    <div class="section-subtitle"><span>The Cappa Luxury Hotel</span></div>
-                    <div class="section-title"><span>Promotional Video</span></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="text-center col-md-12">
-                    <a class="vid" href="https://youtu.be/7BGNAGahig8">
-                        <div class="vid-butn">
-                            <span class="icon">
-                                <i class="ti-control-play"></i>
-                            </span>
-                        </div>
-                    </a>
-                </div>
 
-            </div>
-        </div>
-    </section> --}}
     <!-- Facilties -->
     <section class="facilties section-padding">
         <div class="container">
@@ -1426,7 +1127,7 @@
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="single-facility animate-box" data-animate-effect="fadeInUp">
+                    <div class="single-facility animate-box" data-animate-effect="fadeInUp" style="padding-bottom: 80px">
                         <span class="flaticon-world"></span>
                         <h5>@lang('auth.card_1_title')</h5>
                         <p>@lang('auth.card_1_desc')</p>
@@ -1462,8 +1163,8 @@
                     <div class="col-md-8 offset-md-2">
                         <div class="testimonials-box">
                             <div class="head-box">
-                                <h6>Testimonials</h6>
-                                <h4>What Client's Say?</h4>
+                                <h6>@lang('auth.testimonials')</h6>
+                                <h4>@lang('auth.client_say')</h4>
                                 <div class="line"></div>
                             </div>
                             <div class="owl-carousel owl-theme">
@@ -1471,8 +1172,6 @@
                                     <span class="quote"><img src="images/quot.png" alt></span>
                                     <p>" Chauffeur à l'heure, trajet au top, super gentil rien a dire. Trajet au top !
                                         Très heureuse d'avoir fait appel à vos services. Et à très bientôt ! "</p>
-                                    <p>" Driver on time, trip at the top, super nice nothing to say. Top trip! Very happy
-                                        to have used your services. And see you soon ! "</p>
                                     <div class="info">
                                         <div class="author-img"> <img src="images/1_1.jpg" alt> </div>
                                         <div class="cont"> <span><i class="star-rating"></i><i
@@ -1486,10 +1185,7 @@
                                     <span class="quote"><img src="images/quot.png" alt></span>
                                     <p>" Chauffeur professionnel et faisant preuve d’une grande gentillesse. Véhicule
                                         propre avec eau !"</p>
-                                    <p>
-                                        "Rdv parfait, sait être disponible au bon moment.
-                                        Vous pouvez y aller en toute confiance !"
-                                    </p>
+
                                     <div class="info">
                                         <div class="author-img"> <img src="images/1_1.jpg" alt> </div>
                                         <div class="cont"> <span><i class="star-rating"></i><i
@@ -1499,23 +1195,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="item">
-                                    <span class="quote"><img src="images/quot.png" alt></span>
-                                    <p>
-                                        " Professional driver and showing great kindness. Clean vehicle with water!
-                                        Appointment perfect, knows how to be available at the right time.
-                                        You can go there with confidence!
-                                        Thanks again. "
-                                    </p>
-                                    <div class="info">
-                                        <div class="author-img"> <img src="images/5.jpg" alt> </div>
-                                        <div class="cont"> <span><i class="star-rating"></i><i
-                                                    class="star-rating"></i><i class="star-rating"></i><i
-                                                    class="star-rating"></i><i class="star-rating"></i></span>
-                                            <h6>Merci encore</h6> <span>Guest review</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                                 <div class="item">
                                     <span class="quote"><img src="images/quot.png" alt></span>
                                     <p>
@@ -1525,13 +1205,7 @@
                                         Je recommande sans hésiter. »
 
                                     </p>
-                                    <p>
-                                        “First experience with this NEHLA VTC company.
-                                        Requested service successfully completed.
-                                        Driver on time, friendly, courteous and helpful 👍
-                                        I recommend without hesitation. »
-
-                                    </p>
+                                    
                                     <div class="info">
                                         <div class="author-img"> <img src="images/5.jpg" alt> </div>
                                         <div class="cont"> <span><i class="star-rating"></i><i
@@ -1554,7 +1228,7 @@
             <div class="row">
                 <div class="col-md-6 p-0 animate-box" data-animate-effect="fadeInLeft">
                     <div class="img left">
-                        <a href="restaurant.html"><img src="images/1_5.jpg" alt></a>
+                        <a href="restaurant.html"><img src="{{asset('images/1_5.jpg')}}" alt></a>
                     </div>
                 </div>
                 <div class="col-md-6 p-0 bg-cream valign animate-box" data-animate-effect="fadeInRight">
@@ -1565,7 +1239,7 @@
                             </div>
                             <h4>@lang('auth.tr_1')</h4>
                             <p>@lang('auth.tr_1_desc')</p>
-                            <div class="butn-dark"> <a href="{{app()->getLocale()}}/tour-plans/1"><span>@lang('auth.learn_more')</span></a> </div>
+                            <div class="butn-dark"> <a href="/{{app()->getLocale()}}/tour-plans/1"><span>@lang('auth.learn_more')</span></a> </div>
                             {{-- <div class="butn-dark"> <a href="{{ route('tour-plans', ['locale' => app()->getLocale(), 'tour_id' => '1']) }}"><span>@lang('auth.learn_more')</span></a> </div> --}}
                         </div>
                     </div>
@@ -1580,20 +1254,20 @@
                             </div>
                             <h4>@lang('auth.tr_2')</h4>
                             <p>@lang('auth.tr_2_desc')</p>
-                            <div class="butn-dark"> <a href="{{app()->getLocale()}}/tour-plans/2"><span>@lang('auth.learn_more')</span></a> </div>
+                            <div class="butn-dark"> <a href="/{{app()->getLocale()}}/tour-plans/2"><span>@lang('auth.learn_more')</span></a> </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 p-0 order1 animate-box" data-animate-effect="fadeInRight">
                     <div class="img">
-                        <a href="spa-wellness.html"><img src="images/3_2.jpg" alt></a>
+                        <a href="spa-wellness.html"><img src="{{asset('images/3_2.jpg')}}" alt></a>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 p-0 animate-box" data-animate-effect="fadeInLeft">
                     <div class="img left">
-                        <a href="spa-wellness.html"><img src="images/2_3.jpg" alt></a>
+                        <a href="spa-wellness.html"><img src="{{asset('images/2_3.jpg')}}" alt></a>
                     </div>
                 </div>
                 <div class="col-md-6 p-0 bg-cream valign animate-box" data-animate-effect="fadeInRight">
@@ -1604,266 +1278,36 @@
                             </div>
                             <h4>@lang('auth.tr_3')</h4>
                             <p>@lang('auth.tr_3_desc')</p>
-                            <div class="butn-dark"> <a href="{{app()->getLocale()}}/tour-plans/3"><span>@lang('auth.learn_more')</span></a> </div>
+                            <div class="butn-dark"> <a href="/{{app()->getLocale()}}/tour-plans/3"><span>@lang('auth.learn_more')</span></a> </div>
                         </div>
                     </div>
                 </div>
             </div>
-            {{-- <div class="row">
-                <div class="col-md-6 bg-cream p-0 order2 valign animate-box" data-animate-effect="fadeInLeft">
-                    <div class="content">
-                        <div class="cont text-left">
-                            <div class="info">
-                                <h6>Experiences</h6>
-                            </div>
-                            <h4>The Health Club & Pool</h4>
-                            <p>The health club & pool at elit finibus viverra nec a lacus themo the nesudea seneoice
-                                misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne onen nivami
-                                acsestion augue artine.</p>
-                            <div class="butn-dark"> <a href="spa-wellness.html"><span>Learn More</span></a> </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 p-0 order1 animate-box" data-animate-effect="fadeInRight">
-                    <div class="img">
-                        <a href="spa-wellness.html"><img src="images/1_4.jpg" alt></a>
-                    </div>
-                </div>
-            </div> --}}
         </div>
     </section>
-    <!-- News -->
-    {{-- <section class="news section-padding bg-black">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-subtitle"><span>Hotel Blog</span></div>
-                    <div class="section-title"><span>Our News</span></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="owl-carousel owl-theme">
-                        <div class="item">
-                            <div class="position-re o-hidden"> <img src="images/1_3.jpg" alt>
-                                <div class="date">
-                                    <a href="post.html"> <span>Dec</span> <i>02</i> </a>
-                                </div>
-                            </div>
-                            <div class="con"> <span class="category">
-                                    <a href="news.html">Restaurant</a>
-                                </span>
-                                <h5><a href="post.html">Historic restaurant renovated</a></h5>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="position-re o-hidden"> <img src="images/2_2.jpg" alt>
-                                <div class="date">
-                                    <a href="post.html"> <span>Dec</span> <i>04</i> </a>
-                                </div>
-                            </div>
-                            <div class="con"> <span class="category">
-                                    <a href="news.html">Spa</a>
-                                </span>
-                                <h5><a href="post.html">Benefits of Spa Treatments</a></h5>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="position-re o-hidden"> <img src="images/3_3.jpg" alt>
-                                <div class="date">
-                                    <a href="post.html"> <span>Dec</span> <i>06</i> </a>
-                                </div>
-                            </div>
-                            <div class="con"> <span class="category">
-                                    <a href="news.html">Bathrooms</a>
-                                </span>
-                                <h5><a href="post.html">Hotel Bathroom Collections</a></h5>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="position-re o-hidden"> <img src="images/4_3.jpg" alt>
-                                <div class="date">
-                                    <a href="post.html"> <span>Dec</span> <i>08</i> </a>
-                                </div>
-                            </div>
-                            <div class="con">
-                                <span class="category">
-                                    <a href="news.html">Health</a>
-                                </span>
-                                <h5><a href="post.html">Weight Loss with Fitness Health Club</a></h5>
-                            </div>
-                        </div>
 
-                        <div class="item">
-                            <div class="position-re o-hidden"> <img src="images/6.jpg" alt>
-                                <div class="date">
-                                    <a href="post.html"> <span>Dec</span> <i>08</i> </a>
-                                </div>
-                            </div>
-                            <div class="con"> <span class="category">
-                                    <a href="news.html">Design</a>
-                                </span>
-                                <h5><a href="post.html">Retro Lighting Design in The Hotels</a></h5>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="position-re o-hidden"> <img src="images/5_1.jpg" alt>
-                                <div class="date">
-                                    <a href="post.html"> <span>Dec</span> <i>08</i> </a>
-                                </div>
-                            </div>
-                            <div class="con"> <span class="category">
-                                    <a href="news.html">Health</a>
-                                </span>
-                                <h5><a href="post.html">Benefits of Swimming for Your Health</a></h5>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-    <!-- Reservation & Booking Form -->
-    {{-- <section class="testimonials">
-        <div class="background bg-img bg-fixed section-padding pb-0" data-background="img/slider/2.jpg"
-            data-overlay-dark="2">
-            <div class="container">
-                <div class="row">
-                    <!-- Reservation -->
-                    <div class="col-md-5 mb-30 mt-30">
-                        <p><i class="star-rating"></i><i class="star-rating"></i><i class="star-rating"></i><i
-                                class="star-rating"></i><i class="star-rating"></i></p>
-                        <h5>Each of our guest rooms feature a private bath, wi-fi, cable television and include full
-                            breakfast.</h5>
-                        <div class="reservations mb-30">
-                            <div class="icon color-1"><span class="flaticon-call"></span></div>
-                            <div class="text">
-                                <p class="color-1">Reservation</p> <a class="color-1" href="tel:855-100-4444">855 100
-                                    4444</a>
-                            </div>
-                        </div>
-                        <p><i class="ti-check"></i><small>Call us, it's toll-free.</small></p>
-                    </div>
-                    <!-- Booking From -->
-                    <div class="col-md-5 offset-md-2">
-                        <div class="booking-box">
-                            <div class="head-box">
-                                <h6>Rooms & Suites</h6>
-                                <h4>Hotel Booking Form</h4>
-                            </div>
-                            <div class="booking-inner clearfix">
-                                <form action="rooms2.html" class="form1 clearfix">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="input1_wrapper">
-                                                <label>Check in</label>
-                                                <div class="input1_inner">
-                                                    <input type="text" class="form-control input datepicker"
-                                                        placeholder="Check in">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="input1_wrapper">
-                                                <label>Check out</label>
-                                                <div class="input1_inner">
-                                                    <input type="text" class="form-control input datepicker"
-                                                        placeholder="Check out">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="select1_wrapper">
-                                                <label>Adults</label>
-                                                <div class="select1_inner">
-                                                    <select class="select2 select" style="width: 100%">
-                                                        <option value="0">Adults</option>
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4">4</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="select1_wrapper">
-                                                <label>Children</label>
-                                                <div class="select1_inner">
-                                                    <select class="select2 select" style="width: 100%">
-                                                        <option value="0">Children</option>
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4">4</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <button type="submit" class="btn-form1-submit mt-15">Check
-                                                Availability</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-    <!-- Clients -->
-    {{-- <section class="clients">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7 owl-carousel owl-theme">
-                    <div class="clients-logo">
-                        <a href="#0"><img src="images/1.png" alt></a>
-                    </div>
-                    <div class="clients-logo">
-                        <a href="#0"><img src="images/2.png" alt></a>
-                    </div>
-                    <div class="clients-logo">
-                        <a href="#0"><img src="images/3.png" alt></a>
-                    </div>
-                    <div class="clients-logo">
-                        <a href="#0"><img src="images/4.png" alt></a>
-                    </div>
-                    <div class="clients-logo">
-                        <a href="#0"><img src="images/5.png" alt></a>
-                    </div>
-                    <div class="clients-logo">
-                        <a href="#0"><img src="images/6.png" alt></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
     <!-- Footer -->
     {{View::make('footer')}}
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/jquery-migrate-3.0.0.min.js"></script>
-    <script src="js/modernizr-2.6.2.min.js"></script>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/jquery.isotope.v3.0.2.js"></script>
-    <script src="js/pace.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scrollIt.min.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/jquery.magnific-popup.js"></script>
-    <script src="js/YouTubePopUp.js"></script>
-    <script src="js/select2.js"></script>
-    <script src="js/datepicker.js"></script>
-    <script src="js/smooth-scroll.min.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="{{asset('js/jquery-3.6.0.min.js')}}"></script>
+    <script src="{{asset('js/jquery-migrate-3.0.0.min.js')}}"></script>
+    <script src="{{asset('js/modernizr-2.6.2.min.js')}}"></script>
+    <script src="{{asset('js/imagesloaded.pkgd.min.js')}}"></script>
+    <script src="{{asset('js/jquery.isotope.v3.0.2.js')}}"></script>
+    <script src="{{asset('js/pace.js')}}"></script>
+    <script src="{{asset('js/popper.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('js/scrollIt.min.js')}}"></script>
+    <script src="{{asset('js/jquery.waypoints.min.js')}}"></script>
+    <script src="{{asset('js/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('js/jquery.stellar.min.js')}}"></script>
+    <script src="{{asset('js/jquery.magnific-popup.js')}}"></script>
+    <script src="{{asset('js/YouTubePopUp.js')}}"></script>
+    <script src="{{asset('js/select2.js')}}"></script>
+    <script src="{{asset('js/datepicker.js')}}"></script>
+    <script src="{{asset('js/smooth-scroll.min.js')}}"></script>
+    <script src="{{asset('js/custom.js')}}"></script>
     <script src="http://js.stripe.com/v3/"></script>
     <script src="{{asset('vehicle_popup/js/main.js')}}"></script>
     <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
@@ -1874,11 +1318,111 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
 
     <script>
+        var map, clientReturn, isNewUser, vehiclePrice;
+        var vehicleSelected = false;
+
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });
+
+        function onSelectPassengerRange() {
+            var toPlace
+            if (isSet == 0) {
+                toPlace = document.getElementById("to").value;
+            } else {
+                toPlace = document.getElementById("from").value;
+            }
+            const passengerRange = document.getElementById("passengers").value;
+            
+            $.ajax({
+                type: 'GET',
+                url: "{{ route('getpriceByPlaceName', 'en') }}",
+                data: { placeName: toPlace, range: passengerRange },
+                success: function (data) {
+                    document.getElementById("placeAmount").value = data.success;
+                    document.getElementById("placeAmountFirst").innerHTML = "@lang('auth.price') : " + data.success;
+                }
+            });
+        }
+
+        // validations starts
+
+        $(".checkFeilds").click(function(e) {
+            const toCheck = document.getElementById("to").value;
+            const fromCheck = document.getElementById("from").value;
+            const passengers = document.getElementById("passengers").value;
+            const date = document.getElementById("date").value;
+            let selected = document.querySelector("input[name='tripType']:checked")
+            console.log(passengers);
+            if (toCheck === "0" || fromCheck === "" || passengers === "0" || selected === null || date === "") {
+                alert("Please Fill All Feilds.");
+                e.preventDefault();
+                return false;
+            } else {
+                current_fs = $(this).parent();
+                next_fs = $(this).parent().next();
+
+                //Add Class Active
+                $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+                //show the next fieldset
+                next_fs.show();
+                //hide the current fieldset with style
+                current_fs.animate({ opacity: 0 }, {
+                    step: function (now) {
+                        // for making fielset appear animation
+                        opacity = 1 - now;
+
+                        current_fs.css({
+                            'display': 'none',
+                            'position': 'relative'
+                        });
+                        next_fs.css({ 'opacity': opacity });
+                    },
+                    duration: 600
+                });
+
+                displayRoute();
+            }
+
+            if (clientReturn === "Yes") {
+                document.getElementById("placeAmount").value = document.getElementById("placeAmount").value * 2;
+                document.getElementById("placeAmountFirst").innerHTML = "@lang('auth.price') : " + document.getElementById("placeAmount").value;
+            }
+        });
+
+        $(".checkVehicleSelected").click(function (e) {
+            if (vehicleSelected !== true) {
+                alert("Please Select Vehicle to Proceed.");
+            } else {
+                current_fs = $(this).parent();
+                next_fs = $(this).parent().next();
+
+                //Add Class Active
+                $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+                //show the next fieldset
+                next_fs.show();
+                //hide the current fieldset with style
+                current_fs.animate({ opacity: 0 }, {
+                    step: function (now) {
+                        // for making fielset appear animation
+                        opacity = 1 - now;
+
+                        current_fs.css({
+                            'display': 'none',
+                            'position': 'relative'
+                        });
+                        next_fs.css({ 'opacity': opacity });
+                    },
+                    duration: 600
+                });
+            }
+        });
+
+        //validations ends
 
         var isSet = 0;
         function inverseLocations() {
@@ -1923,18 +1467,16 @@
                 toPlace = document.getElementById("from").value;
             }
 
-            $.ajax({
-                type: 'GET',
-                url: "{{ route('getpriceByPlaceName', 'en') }}",
-                data: { placeName: toPlace },
-                success: function (data) {
-                    document.getElementById("placeAmount").value = data.success;
-                    document.getElementById("placeAmountFirst").innerHTML = "Price : " + data.success;
-                }
-            });
+            // $.ajax({
+            //     type: 'GET',
+            //     url: "{{ route('getpriceByPlaceName', 'en') }}",
+            //     data: { placeName: toPlace },
+            //     success: function (data) {
+            //         document.getElementById("placeAmount").value = data.success;
+            //         document.getElementById("placeAmountFirst").innerHTML = "@lang('auth.price') : " + data.success;
+            //     }
+            // });
         }
-
-        var map, clientReturn, isNewUser, vehiclePrice;
 
         initMap();
         var pickInput = document.getElementById("from");
@@ -1943,8 +1485,8 @@
         var returnForm = document.getElementById("returnFromHiddenEl");
         var pickAutoComplete = new google.maps.places.Autocomplete(pickInput);
         // var destinationAutocomplete = new google.maps.places.Autocomplete(destinationInput);
-        var returnToAutoComplete = new google.maps.places.Autocomplete(returnTo);
-        var returnFromAutoComplete = new google.maps.places.Autocomplete(returnFrom);
+        // var returnToAutoComplete = new google.maps.places.Autocomplete(returnTo);
+        // var returnFromAutoComplete = new google.maps.places.Autocomplete(returnFrom);
 
         function onClickNext() {
             var to = document.getElementById("to").value;
@@ -1959,15 +1501,15 @@
             // var wheelChair = document.getElementById("wheelChair").value;
             // var meet = document.getElementById("meet").value;
 
-            document.getElementById("fromRes").innerHTML = "From : " + pickInput.value;
-            document.getElementById("toRes").innerHTML = "To : " + to;
-            document.getElementById("dateRes").innerHTML = "Date : " + date;
-            document.getElementById("timeRes").innerHTML = "Time : " + hour + " : " + min;
+            document.getElementById("fromRes").innerHTML = "@lang('auth.from') : " + pickInput.value;
+            document.getElementById("toRes").innerHTML = "@lang('auth.to') : " + to;
+            document.getElementById("dateRes").innerHTML = "@lang('auth.date') : " + date;
+            document.getElementById("timeRes").innerHTML = "@lang('auth.time') : " + hour + " : " + min;
 
-            document.getElementById("passengerRes").innerHTML = "Passengers : " + passengers;
-            document.getElementById("luggageRes").innerHTML = "Luggage : " + luggage;
-            document.getElementById("babySeatsRes").innerHTML = "Baby Seats : " + babySeats;
-            document.getElementById("resturnRes").innerHTML = "Return : " + clientReturn;
+            document.getElementById("passengerRes").innerHTML = "@lang('auth.passengers') : " + passengers;
+            document.getElementById("luggageRes").innerHTML = "@lang('auth.luggage') : " + luggage;
+            document.getElementById("babySeatsRes").innerHTML = "@lang('auth.baby_seat') : " + babySeats;
+            document.getElementById("resturnRes").innerHTML = "@lang('auth.return') : " + clientReturn;
             // document.getElementById("boosterRes").innerHTML = "Booster Seat : " + boosterSeat;
             // document.getElementById("wheelChairRes").innerHTML = "Wheel Chairs : " + wheelChair;
             // document.getElementById("meetRes").innerHTML = "Meet & Greet : " + meet;
@@ -1994,14 +1536,13 @@
                 clientReturn = "Yes";
                 changeDomToReturnInfo.style.display = null;
 
-                document.getElementById("returnToHiddenEl").style.display = null;
-                document.getElementById("returnFromHiddenEl").style.display = null;
+                // document.getElementById("returnToHiddenEl").style.display = null;
+                // document.getElementById("returnFromHiddenEl").style.display = null;
             } else {
                 changeDomToReturnInfo.style.display = "none";
                 clientReturn = "No";
 
-                document.getElementById("returnToHiddenEl").style.display = "none";
-                document.getElementById("returnFromHiddenEl").style.display = "none";
+                
             }
         }
 
@@ -2017,85 +1558,16 @@
             $(".checkClick").click(function (e) {
                 if (isNewUser !== true) {
                     var emailCheck = $("input[name=checkMail]").val();
-                    $.ajax({
-                        type: 'GET',
-                        url: "{{ route('clientEmailCheck', 'en') }}",
-                        data: { email: emailCheck },
-                        success: function (data) {
-                            if (data.status != 0) {
-                                current_fs = $(".checkClick").parent();
-                                next_fs = $(".checkClick").parent().next();
 
-                                //Add Class Active
-                                $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
-
-                                //show the next fieldset
-                                next_fs.show();
-                                //hide the current fieldset with style
-                                current_fs.animate({ opacity: 0 }, {
-                                    step: function (now) {
-                                        // for making fielset appear animation
-                                        opacity = 1 - now;
-
-                                        current_fs.css({
-                                            'display': 'none',
-                                            'position': 'relative'
-                                        });
-                                        next_fs.css({ 'opacity': opacity });
-                                    },
-                                    duration: 600
-                                });
-                                document.getElementById("fnameRes").innerHTML = "First Name : " + data.result["first_name"];
-                                document.getElementById("lnameRes").innerHTML = "Last Name : " + data.result["last_name"];
-                                document.getElementById("mobileRes").innerHTML = "Mobile Number : " + data.result["mobile_number"];
-                                document.getElementById("emailRes").innerHTML = "Email Address : " + data.result["email"];
-
-                                document.getElementById("vehicleNameLast").innerHTML = "Name : " + vehicleName;
-                                document.getElementById("vehiclePriceLast").innerHTML = "Price : " + document.getElementById("placeAmount").value;
-
-                                var to = document.getElementById("to").value;
-                                var date = document.getElementById("date").value;
-                                var hour = document.getElementById("hour").value;
-                                var min = document.getElementById("min").value;
-
-                                var passengers = document.getElementById("passengers").value;
-                                var luggage = document.getElementById("luggage").value;
-                                var babySeats = document.getElementById("babySeat").value;
-                                // var boosterSeat = document.getElementById("boosterSeat").value;
-                                // var wheelChair = document.getElementById("wheelChair").value;
-                                // var meet = document.getElementById("meet").value;
-
-                                document.getElementById("fromResLast").innerHTML = "From : " + pickInput.value;
-                                document.getElementById("toResLast").innerHTML = "To : " + to;
-                                document.getElementById("dateResLast").innerHTML = "Date : " + date;
-                                document.getElementById("timeResLast").innerHTML = "Time : " + hour + " : " + min;
-
-                                document.getElementById("passengersResLast").innerHTML = "Passengers : " + passengers;
-                                document.getElementById("luggageResLast").innerHTML = "Luggage : " + luggage;
-                                document.getElementById("babySeatsResLast").innerHTML = "Baby Seats : " + babySeats;
-                                document.getElementById("returnResLast").innerHTML = "Return : " + clientReturn;
-                                document.getElementById("boosterSeatResLast").innerHTML = "Booster Seat : " + boosterSeat;
-                                document.getElementById("wheelChairResLast").innerHTML = "Wheel Chairs : " + wheelChair;
-                                document.getElementById("meetResLast").innerHTML = "Meet & Greet : " + meet;
-                            }
-                        }
-                    });
-                } else {
-                    if (document.getElementById("password").value === document.getElementById("confirmPassword").value) {
-
-                        var fname = $("input[name=fname]").val();
-                        var lname = $("input[name=lname]").val();
-                        var password = $("input[name=password]").val();
-                        var email = $("input[name=emailAddress]").val();
-                        var mobile = $("input[name=mobileNumber]").val();
-
+                    if (emailCheck === "") {
+                        alert("Please Enter Email Address.");
+                    } else {
                         $.ajax({
-                            type: 'POST',
-                            url: "{{ route('ajaxRequest.post', 'en') }}",
-                            data: { fname: fname, lname: lname, email: email, mobile: mobile, password: password },
+                            type: 'GET',
+                            url: "{{ route('clientEmailCheck', 'en') }}",
+                            data: { email: emailCheck },
                             success: function (data) {
-                                if (data.status === '1') {
-
+                                if (data.status != 0) {
                                     current_fs = $(".checkClick").parent();
                                     next_fs = $(".checkClick").parent().next();
 
@@ -2118,15 +1590,13 @@
                                         },
                                         duration: 600
                                     });
+                                    document.getElementById("fnameRes").innerHTML = "@lang('auth.fname') : " + data.result["first_name"];
+                                    document.getElementById("lnameRes").innerHTML = "@lang('auth.lname') : " + data.result["last_name"];
+                                    document.getElementById("mobileRes").innerHTML = "@lang('auth.mobile') : " + data.result["mobile_number"];
+                                    document.getElementById("emailRes").innerHTML = "@lang('auth.email') : " + data.result["email"];
 
-                                    document.getElementById("fnameRes").innerHTML = "First Name : " + document.getElementById("fname").value;
-                                    document.getElementById("lnameRes").innerHTML = "Last Name : " + document.getElementById("lname").value;
-                                    document.getElementById("mobileRes").innerHTML = "Mobile Number : " + document.getElementById("mobileNumber").value;
-                                    document.getElementById("emailRes").innerHTML = "Email Address : " + document.getElementById("emailAddress").value;
-
-                                    document.getElementById("vehicleName").innerHTML = "Name : " + vehicleName;
-                                    document.getElementById("vehicleNameLast").innerHTML = "Name : " + vehicleName;
-                                    document.getElementById("vehiclePriceLast").innerHTML = "Price : " + document.getElementById("placeAmount").value;
+                                    document.getElementById("vehicleNameLast").innerHTML = "@lang('auth.name') : " + vehicleName;
+                                    document.getElementById("vehiclePriceLast").innerHTML = "@lang('auth.price') : " + document.getElementById("placeAmount").value;
 
                                     var to = document.getElementById("to").value;
                                     var date = document.getElementById("date").value;
@@ -2140,28 +1610,108 @@
                                     // var wheelChair = document.getElementById("wheelChair").value;
                                     // var meet = document.getElementById("meet").value;
 
-                                    document.getElementById("fromResLast").innerHTML = "From : " + pickInput.value;
-                                    document.getElementById("toResLast").innerHTML = "To : " + to;
-                                    document.getElementById("dateResLast").innerHTML = "Date : " + date;
-                                    document.getElementById("timeResLast").innerHTML = "Time : " + hour + " : " + min;
+                                    document.getElementById("fromResLast").innerHTML = "@lang('auth.from') : " + pickInput.value;
+                                    document.getElementById("toResLast").innerHTML = "@lang('auth.to') : " + to;
+                                    document.getElementById("dateResLast").innerHTML = "@lang('auth.date') : " + date;
+                                    document.getElementById("timeResLast").innerHTML = "@lang('auth.time') : " + hour + " : " + min;
 
-                                    document.getElementById("passengersResLast").innerHTML = "Passengers : " + passengers;
-                                    document.getElementById("luggageResLast").innerHTML = "Luggage : " + luggage;
-                                    document.getElementById("babySeatsResLast").innerHTML = "Baby Seats : " + babySeats;
-                                    document.getElementById("returnResLast").innerHTML = "Return : " + clientReturn;
-                                    document.getElementById("boosterSeatResLast").innerHTML = "Booster Seat : " + boosterSeat;
-                                    document.getElementById("wheelChairResLast").innerHTML = "Wheel Chairs : " + wheelChair;
-                                    document.getElementById("meetResLast").innerHTML = "Meet & Greet : " + meet;
-
-                                } else if (data.status === '2') {
-                                    alert("Duplicate User.");
-                                } else {
-                                    alert("Error");
+                                    document.getElementById("passengersResLast").innerHTML = "@lang('auth.passengers') : " + passengers;
+                                    document.getElementById("luggageResLast").innerHTML = "@lang('auth.luggage') : " + luggage;
+                                    document.getElementById("babySeatsResLast").innerHTML = "@lang('auth.baby_seat') : " + babySeats;
+                                    document.getElementById("returnResLast").innerHTML = "@lang('auth.return') : " + clientReturn;
+                                    // document.getElementById("boosterSeatResLast").innerHTML = "Booster Seat : " + boosterSeat;
+                                    // document.getElementById("wheelChairResLast").innerHTML = "Wheel Chairs : " + wheelChair;
+                                    // document.getElementById("meetResLast").innerHTML = "Meet & Greet : " + meet;
                                 }
                             }
                         });
+                    }
+                } else {
+                    var fname = $("input[name=fname]").val();
+                    var lname = $("input[name=lname]").val();
+                    var password = $("input[name=password]").val();
+                    var email = $("input[name=emailAddress]").val();
+                    var mobile = $("input[name=mobileNumber]").val();
+
+                    if (fname === "" || lname === "" || password === "" || email === "" || mobile === "") {
+                        alert("Please Fill All Feilds");
                     } else {
-                        alert("Password Doesnt Match");
+                        if (document.getElementById("password").value === document.getElementById("confirmPassword").value ) {
+
+                            $.ajax({
+                                type: 'POST',
+                                url: "{{ route('ajaxRequest.post', 'en') }}",
+                                data: { fname: fname, lname: lname, email: email, mobile: mobile, password: password },
+                                success: function (data) {
+                                    if (data.status === '1') {
+
+                                        current_fs = $(".checkClick").parent();
+                                        next_fs = $(".checkClick").parent().next();
+
+                                        //Add Class Active
+                                        $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+                                        //show the next fieldset
+                                        next_fs.show();
+                                        //hide the current fieldset with style
+                                        current_fs.animate({ opacity: 0 }, {
+                                            step: function (now) {
+                                                // for making fielset appear animation
+                                                opacity = 1 - now;
+
+                                                current_fs.css({
+                                                    'display': 'none',
+                                                    'position': 'relative'
+                                                });
+                                                next_fs.css({ 'opacity': opacity });
+                                            },
+                                            duration: 600
+                                        });
+
+                                        document.getElementById("fnameRes").innerHTML = "First Name : " + document.getElementById("fname").value;
+                                        document.getElementById("lnameRes").innerHTML = "Last Name : " + document.getElementById("lname").value;
+                                        document.getElementById("mobileRes").innerHTML = "Mobile Number : " + document.getElementById("mobileNumber").value;
+                                        document.getElementById("emailRes").innerHTML = "Email Address : " + document.getElementById("emailAddress").value;
+
+                                        document.getElementById("vehicleName").innerHTML = "@lang('auth.name') : " + vehicleName;
+                                        document.getElementById("vehicleNameLast").innerHTML = "@lang('auth.name') : " + vehicleName;
+                                        document.getElementById("vehiclePriceLast").innerHTML = "@lang('auth.price') : " + document.getElementById("placeAmount").value;
+
+                                        var to = document.getElementById("to").value;
+                                        var date = document.getElementById("date").value;
+                                        var hour = document.getElementById("hour").value;
+                                        var min = document.getElementById("min").value;
+
+                                        var passengers = document.getElementById("passengers").value;
+                                        var luggage = document.getElementById("luggage").value;
+                                        var babySeats = document.getElementById("babySeat").value;
+                                        // var boosterSeat = document.getElementById("boosterSeat").value;
+                                        // var wheelChair = document.getElementById("wheelChair").value;
+                                        // var meet = document.getElementById("meet").value;
+
+                                        document.getElementById("fromResLast").innerHTML = "From : " + pickInput.value;
+                                        document.getElementById("toResLast").innerHTML = "To : " + to;
+                                        document.getElementById("dateResLast").innerHTML = "Date : " + date;
+                                        document.getElementById("timeResLast").innerHTML = "Time : " + hour + " : " + min;
+
+                                        document.getElementById("passengersResLast").innerHTML = "Passengers : " + passengers;
+                                        document.getElementById("luggageResLast").innerHTML = "Luggage : " + luggage;
+                                        document.getElementById("babySeatsResLast").innerHTML = "Baby Seats : " + babySeats;
+                                        document.getElementById("returnResLast").innerHTML = "Return : " + clientReturn;
+                                        document.getElementById("boosterSeatResLast").innerHTML = "Booster Seat : " + boosterSeat;
+                                        document.getElementById("wheelChairResLast").innerHTML = "Wheel Chairs : " + wheelChair;
+                                        document.getElementById("meetResLast").innerHTML = "Meet & Greet : " + meet;
+
+                                    } else if (data.status === '2') {
+                                        alert("Duplicate User.");
+                                    } else {
+                                        alert("Error");
+                                    }
+                                }
+                            });
+                        } else {
+                            alert("Password Doesnt Match");
+                        }
                     }
                 }
             });
@@ -2260,17 +1810,16 @@
         const cpyParentNode = parentNodes;
 
         var vehicleName;
-        var vehicleSelected = false;
 
         function buyNow(name, id, jsId) {
             vehicleName = name;
-            document.getElementById("vehicleName").innerHTML = "Name : " + name;
+            document.getElementById("vehicleName").innerHTML = "@lang('auth.name') : " + name;
             const selectedVehicle = document.getElementById("selectedVehicle");
 
             // parentNodes.remove();
             selectedVehicle.innerHTML = "<input type='hidden' name='vehicleId' value='" + id + "' id='vehicleId'>";
             document.getElementById("vehicleId").value = id;
-            document.getElementById("totalAmount").innerHTML = "Price : " + document.getElementById("placeAmount").value;
+            document.getElementById("totalAmount").innerHTML = "@lang('auth.price') : " + document.getElementById("placeAmount").value;
 
             if (vehicleSelected != true) {
                 const getBuy = document.getElementById(jsId);
@@ -2368,7 +1917,7 @@
                     url: "{{ route('getPromoValueByCode', 'en') }}",
                     data: { promoCode: promoCode },
                     success: function (data) {
-                        document.getElementById("totalAmount").innerHTML = "Price : " + (totalAmount - (totalAmount * (data.success / 100)));
+                        document.getElementById("totalAmount").innerHTML = "@lang('auth.price') : " + (totalAmount - (totalAmount * (data.success / 100)));
                         document.getElementById("placeAmount").value = totalAmount - (totalAmount * (data.success / 100));
                     }
                 });

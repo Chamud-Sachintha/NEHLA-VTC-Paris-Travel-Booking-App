@@ -38,13 +38,13 @@
                             {{-- <a href="#"><i class="ti-pinterest"></i></a> --}}
                         </div>
 
-                        <div class="footer-language"> <i class="lni ti-world"></i>
+                        {{-- <div class="footer-language"> <i class="lni ti-world"></i>
                             <select onchange="onChangeLanguage()" id="languageSelect" style="width: 700px !important;">
                                 <option value="n">Change Language</option>
                                 <option value="en">English</option>
                                 <option value="fr">French</option>
                             </select>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
