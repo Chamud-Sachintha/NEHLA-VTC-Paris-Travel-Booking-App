@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>The Cappa Luxury Hotel</title>
-    <link rel="shortcut icon" href="images/favicon.png">
+    <title>The NEHLA VTC Paris - THE NEHLA LUXURY TRANSPORT</title>
+    <link rel="shortcut icon" href="{{asset('images/favicon.png')}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow&amp;family=Barlow+Condensed&amp;family=Gilda+Display&amp;display=swap">
@@ -90,7 +90,7 @@
                 <div class="col-md-6 col-lg-6 col-sm-12 mt-2">
                     <div class="card">
                         <div class="card-body">
-                            <h3>Get in touch</h3>
+                            <h3>@lang('auth.get_in_touch')</h3>
                             <form method="post" class="" action="/applyTour">
                                 @csrf
                                 <!-- form message -->
@@ -104,25 +104,25 @@
                                 <!-- form elements -->
                                 <div class="row">
                                     <div class="col-md-6 form-group">
-                                        <input name="name" type="text" placeholder="Your Name *" required>
+                                        <input name="name" type="text" placeholder="@lang('auth.form_name') *" required>
                                     </div>
                                     <div class="col-md-6 form-group">
-                                        <input name="email" type="email" placeholder="Your Email *" required>
+                                        <input name="email" type="email" placeholder="@lang('auth.form_email') *" required>
                                     </div>
                                     <div class="col-md-6 form-group">
-                                        <input name="phone" type="text" placeholder="Your Number *" required>
+                                        <input name="phone" type="text" placeholder="@lang('auth.form_mobile') *" required>
                                     </div>
                                     <div class="col-md-6 form-group">
-                                        <input name="subject" type="text" placeholder="Subject *" required>
+                                        <input name="subject" type="text" placeholder="@lang('auth.subject') *" required>
                                     </div>
                                     <div class="col-md-12 form-group">
-                                        <textarea name="message" id="message" cols="30" rows="4" placeholder="Message *" required></textarea>
+                                        <textarea name="message" id="message" cols="30" rows="4" placeholder="@lang('auth.message') *" required></textarea>
                                     </div>
                                     <div class="col-md-12">
                                         {{-- {{dd(request()->route('id'))}} --}}
                                         <input type="hidden" value="{{$id}}" name="tour_id">
                                         {{-- <button type="submit" class="butn-dark"><a href="#0"><span>Send Message</span></a></button> --}}
-                                        <input type="submit" class="butn-dark" value="Send Message">
+                                        <input type="submit" class="butn-dark" value="@lang('auth.send_message')">
                                     </div>
                                 </div>
                             </form>
@@ -134,31 +134,31 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="" style="padding-left: 20px; padding-bottom: 48px">
-                                    <h3>Our Contact Details</h3>
+                                    <h3>@lang('auth.out_contact_details')</h3>
                                     <div class="reservations mb-30">
                                         <div class="icon"><span class="flaticon-call"></span></div>
                                         <div class="text">
-                                            <p>Reservation</p> <a href="tel:855-100-4444">+33 6 36 20 35 62</a>
+                                            <p>@lang('auth.reservation')</p> <a href="tel:33 6 36 20 35 62">+33 6 36 20 35 62</a>
                                         </div>
                                     </div>
                                     <div class="reservations mb-30">
                                         <div class="icon"><span class="flaticon-envelope"></span></div>
                                         <div class="text">
-                                            <p>Email Info</p> <a href="mailto:info@luxuryhotel.com">contact@nehlavtcparis.com</a>
+                                            <p>@lang('auth.form_email')</p> <a href="mailto:contact@nehlavtcparis.com">contact@nehlavtcparis.com</a>
                                         </div>
                                     </div>
-                                    <div class="reservations">
+                                    {{-- <div class="reservations">
                                         <div class="icon"><span class="flaticon-location-pin"></span></div>
                                         <div class="text">
-                                            <p>Address</p> 28, rue Tristan Tzara 75018
+                                            <p>@lang('auth.address')</p> 28, rue Tristan Tzara 75018
                                             <br>Paris
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <div class="footer-about-social-list" style="color: gold">
-                                        <a href="https://instagram.com/nehlavtcparis?igshid=YmMyMTA2M2Y="><i class="ti-instagram"></i></a>
+                                        <a href="https://instagram.com/nehlavtcparis?igshid=YmMyMTA2M2Y=" target="_blank"><i class="ti-instagram"></i></a>
                                         {{-- <a href="#"><i class="ti-twitter"></i></a> --}}
-                                        <a href="https://www.linkedin.com/mwlite/company/nehla-vtc-paris"><i class="ti-linkedin"></i></a>
-                                        <a href="https://www.facebook.com/nehlavtcparis"><i class="ti-facebook"></i></a>
+                                        <a href="https://www.linkedin.com/company/nehla-vtc-paris/" target="_blank"><i class="ti-linkedin"></i></a>
+                                        <a href="https://www.facebook.com/nehlavtcparis" target="_blank"><i class="ti-facebook"></i></a>
                                         {{-- <a href="#"><i class="ti-pinterest"></i></a> --}}
                                     </div>
                                 </div>

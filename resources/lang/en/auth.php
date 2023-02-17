@@ -23,6 +23,7 @@ return [
     'nav_vehicles'=>'Vehicles',
     'nav_tours'=>'Special Tours',
     'nav_contact'=>'Contact',
+    'nav_privacy' => 'Legacy Note',
 
     //main slider
     // first
@@ -113,15 +114,19 @@ return [
     'sec_5_sub_title'=>'OUR SERVICES',
     'sec_5_title'=>'Transport Facilities',
     'card_1_title'=>'Refreshments, drinks',
-    'card_1_desc'=>'We’ll pick up from airport while you comfy on your ride, mus nellentesque habitant.',
+    'card_1_desc'=>'Relax on board our vehicles equipped with drinks.',
     'card_2_title'=>'Baby seat on Request',
-    'card_2_desc'=>'Fusce tincidunt nis ace park norttito sit amet space, mus nellentesque habitant.',
+    'card_2_desc'=>'Are you traveling with a baby? Tell us when you book and we will equip the vehicle with a baby seat to guarantee the safety of your baby.',
     'card_3_title'=>'Charger',
-    'card_3_desc'=>'Room tincidunt nis ace park norttito sit amet space, mus nellentesque habitant.',
+    'card_3_desc'=>'Because our smartphones are essential to us, our vehicles are all equipped with cables to charge your smartphones.',
 
     //6th section
     'testimonials'=>'TESTIMONIALS',
     'client_say'=>'What Client\'s Say?',
+    'cmnt_1' => 'Driver on time, top trip, super nice nothing to say. Top trip! Very happy to have used your services. And see you soon !',
+    'cmnt_2' => 'Professional driver and showing great kindness. Vehicle clean with water!',
+    'cmnt_3' => 'First experience with this company NEHLA VTC. Requested service successfully completed. Driver on time, friendly, courteous and helpful 👍 I recommend without hesitation.',
+    'gr' => 'Guest review',
 
     //7th section
     'discover'=>'DISCOVER',
@@ -154,13 +159,35 @@ return [
     'about_li_4'=>'Vehicle equipped with water, charger, radio and many other services to offer you a journey in the greatest comfort.',
 
     // contact page
+    'out_contact_details' => 'Our Contact Details',
     'get_in_touch'=>'GET IN TOUCH',
     'contact_us'=>'Contact Us',
     'contact_title'=>'The NEHLA VTC Paris',
-    'contact_desc'=>'Hotel ut nisl quam nestibulum ac quam nec odio elementum sceisue the aucan ligula. Orci varius natoque penatibus et magnis dis parturient monte nascete ridiculus mus nellentesque habitant morbine.',
+    'contact_desc'=>'A question ? A special request to submit to us? Our team is at your disposal to answer all your questions.',
     'email_info'=>'Email Info',
+    'subject'=>'Subject',
     'form_name'=>'Your Name',
     'form_email'=>'Your Email',
     'form_mobile'=>'Your Number',
     'message'=>'Your Message',
+    'send_message'=>'Send Message',
+    'address'=>'Adress',
+
+    //privacy policy
+    'privacy_title' => 'LEGAL NOTICES',
+    'p1' => 'NEHLA VTC PARIS is an individual company, registered with the Paris Trade and Companies Register under number 920 450 152, whose registered office is at 28, rue Tristan Tzara 75018 Paris, represented by its legal representative in office, domiciled in this capacity. said head office, duly authorized for the purpose hereof.',
+    'p2' => 'The publication director is Mrs. Nethra JAYASURIYA as manager of the company NEHLA VTC PARIS.',
+    'p3' => 'The WWW.NEHLAVTCPARIS.COM site is hosted by the Hostings.',
+    'p4' => 'For any complaint concerning this site, you can contact the company NEHLA VTC PARIS electronically at the following address: contact@nehlavtcparis.com',
+    'p5' => 'Personal data :',
+    'p6' => 'In accordance with the Data Protection Act of January 6, 1978 amended by the law of August 6, 2004 relating to the protection of individuals with regard to the processing of personal data, any user of the site has, at any time, a right to access, modify, rectify or delete data concerning him. For this, the user can consult and modify this data directly via the site www.nehlatvcparis.com or must make his request either electronically to the following address: contact@nehlavtcparis.com or by post to the following address 28, rue Tristan Tzara 75018 Paris',
+    'p7' => 'Content of stored information:',
+    'p8' => 'In accordance with article 6 of the law of June 21, 2004 on confidence in the digital economy, in its capacity as host, Hostings is legally required to set up an easily accessible and visible device, allowing anyone to its knowledge the dissemination, via the Site, of content relating to: glorification of crimes against humanity incitement to racial hatred child pornography incitement to violence violation of human dignity. You can also send a detailed letter to our company specifying the date, your identity, the URL address of the disputed content, its description and the identifier of its author.',
+    'p9' => 'Following receipt, by the company NEHLA VTC PARIS, of a report addressing the offenses referred to above, the content concerned will immediately be removed from the Site and informed of the competent public authorities.',
+    'p10' => 'For all intents and purposes, it is reminded that the fact, for any person, of presenting content or an activity as being illicit in order to obtain its withdrawal or to stop its distribution, when he knows this inaccurate information, is punished by one year\'s imprisonment and a fine of 15,000 euros.',
+    'p11' => 'Cookies :',
+    'p12' => 'The website www.nehlavtcparis.com may collect information automatically through the use of "cookies" (or connection witnesses) which allow you to follow your navigation on the site. A cookie does not allow NEHLA VTC PARIS to identify You; on the other hand, it records information relating to the navigation of your computer on the site www.nehlavtcparis.com in order to establish the parameters of the session during your connection. These cookies allow the site www.nehlavtcparis.com to process your requests and to ensure the proper functioning of the website. The site www.nehlavtcparis.com uses cookies in particular to memorize your contact details when you identify yourself so that you no longer have to provide them afterwards (this memorization is optional and you remain free to modify your contact details later). You always have the option of deactivating or preventing the placement of these cookies or of being informed of their creation by configuring your browser through an “Internet options”, “preferences” or “security” menu. NEHLA VTC PARIS invites You to consult the “help” section of your Internet browser to find out more about how to configure these functions.',
+    'p13' => 'Content of the Site www.nehlavtcparis.com:',
+    'p14' => 'The content of the site www.nehlavtcparis.com, the general structure, the texts, the images, animated or not, and the sounds of which it is composed are the exclusive property of the company NEHLA VTC PARIS. Any total or partial use of the website www.nehlavtcparis.com, by any means whatsoever, is prohibited and would constitute an infringement punishable by articles L.335-2 and following of the Intellectual Property Code.',
+    'p15' => 'All rights reserved © 2022 NEHLA VTC PARIS',
 ];

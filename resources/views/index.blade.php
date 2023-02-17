@@ -416,7 +416,7 @@
         </div>
         <!-- slider reservation -->
         <div class="reservation">
-            <a href="tel:8551004444">
+            <a href="tel:33 6 36 20 35 62">
                 <div class="icon d-flex justify-content-center align-items-center">
                     <i class="flaticon-call"></i>
                 </div>
@@ -512,7 +512,7 @@
             <div class="row justify-content-center mt-0">
                 <div class="col-11 col-sm-9 col-md-7 col-lg-6 text-center p-0 mt-3 mb-2">
                     <div class="card px-0 pt-4 pb-0 mt-3 mb-3" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;">
-                        <strong class="section-title" style="font-size: 35px; font-weight: 700px">@lang('auth.sec_3_title')</strong>
+                        <strong class="section-title ms-5 me-5" style="font-size: 35px; font-weight: 700px">@lang('auth.sec_3_title')</strong>
                         <div class="text-center">
                             <div class="butn-dark"> <a href="/client/login"><span>@lang('auth.manage_bookings')</span></a> </div>
                             {{-- <a href="" class="btn btn-primary btn-sm" style="width: 150px">Manage Bookings</a> --}}
@@ -568,21 +568,30 @@
                                                 </div>
                                                 <div class="col-md-6 col-lg-6 col-sm-12">
                                                     <h2 class="fs-title">@lang('auth.options')</h2>
-
-                                                    <table width=300>
-                                                        <tr>
-                                                            <td><label for="">@lang('auth.oneway')</label></td>
-                                                            <td>
-                                                                <input type="radio" name="tripType" value="oneWay"
-                                                                    style="margin-top: 1.2rem" id="ow">
-                                                            </td>
-                                                            <td><label for="">@lang('auth.return')</label></td>
-                                                            <td>
-                                                                <input type="radio" name="tripType" value="return"
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <label for="">@lang('auth.oneway')</label>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <input type="radio" name="tripType" value="oneWay"
+                                                                        style="margin-top: 1.2rem" id="ow">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <label for="">@lang('auth.return')</label>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <input type="radio" name="tripType" value="return"
                                                                     style="margin-top: 1.2rem" id="rw">
-                                                            </td>
-                                                        </tr>
-                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
 
                                                     <div class="row mt-2">
                                                         <div class="col-6">
@@ -727,7 +736,7 @@
                                             <div class="row">
                                                 <div class="col-md-6 col-lg-6 col-sm-12">
                                                     <h2 class="fs-title">@lang('auth.map')</h2>
-                                                    <div id="map" style="width: 280px; height: 400px;">
+                                                    <div id="map" style="width: 100%; height: 400px;">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6 col-sm-12">
@@ -1126,14 +1135,26 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4">
-                    <div class="single-facility animate-box" data-animate-effect="fadeInUp" style="padding-bottom: 80px">
-                        <span class="flaticon-world"></span>
-                        <h5>@lang('auth.card_1_title')</h5>
-                        <p>@lang('auth.card_1_desc')</p>
-                        <div class="facility-shape"> <span class="flaticon-world"></span> </div>
+                @if ( Config::get('app.locale') == 'en')
+
+                    <div class="col-md-4">
+                        <div class="single-facility animate-box" data-animate-effect="fadeInUp" style="padding-bottom: 16%">
+                            <span class="flaticon-world"></span>
+                            <h5>@lang('auth.card_1_title')</h5>
+                            <p>@lang('auth.card_1_desc')</p>
+                            <div class="facility-shape"> <span class="flaticon-world"></span> </div>
+                        </div>
                     </div>
-                </div>
+                @else
+                    <div class="col-md-4">
+                        <div class="single-facility animate-box" data-animate-effect="fadeInUp" style="padding-bottom: 23%">
+                            <span class="flaticon-world"></span>
+                            <h5>@lang('auth.card_1_title')</h5>
+                            <p>@lang('auth.card_1_desc')</p>
+                            <div class="facility-shape"> <span class="flaticon-world"></span> </div>
+                        </div>
+                    </div>
+                @endif
                 <div class="col-md-4">
                     <div class="single-facility animate-box" data-animate-effect="fadeInUp">
                         <span class="flaticon-car"></span>
@@ -1170,28 +1191,26 @@
                             <div class="owl-carousel owl-theme">
                                 <div class="item">
                                     <span class="quote"><img src="images/quot.png" alt></span>
-                                    <p>" Chauffeur à l'heure, trajet au top, super gentil rien a dire. Trajet au top !
-                                        Très heureuse d'avoir fait appel à vos services. Et à très bientôt ! "</p>
+                                    <p>" @lang('auth.cmnt_1') "</p>
                                     <div class="info">
                                         <div class="author-img"> <img src="images/1_1.jpg" alt> </div>
                                         <div class="cont"> <span><i class="star-rating"></i><i
                                                     class="star-rating"></i><i class="star-rating"></i><i
                                                     class="star-rating"></i><i class="star-rating"></i></span>
-                                            <h6>Maureen G.</h6> <span>Guest review</span>
+                                            <h6>Maureen G.</h6> <span>@lang('auth.gr')</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="item">
                                     <span class="quote"><img src="images/quot.png" alt></span>
-                                    <p>" Chauffeur professionnel et faisant preuve d’une grande gentillesse. Véhicule
-                                        propre avec eau !"</p>
+                                    <p>" @lang('auth.cmnt_2') "</p>
 
                                     <div class="info">
                                         <div class="author-img"> <img src="images/1_1.jpg" alt> </div>
                                         <div class="cont"> <span><i class="star-rating"></i><i
                                                     class="star-rating"></i><i class="star-rating"></i><i
                                                     class="star-rating"></i><i class="star-rating"></i></span>
-                                            <h6>Julien C</h6> <span>Guest review</span>
+                                            <h6>Julien C</h6> <span>@lang('auth.gr')</span>
                                         </div>
                                     </div>
                                 </div>
@@ -1199,10 +1218,7 @@
                                 <div class="item">
                                     <span class="quote"><img src="images/quot.png" alt></span>
                                     <p>
-                                        « Première expérience avec cette entreprise NEHLA VTC.
-                                        Prestation demandée satisfaite avec succès.
-                                        Chauffeur à l'heure, aimable, courtois et serviable 👍
-                                        Je recommande sans hésiter. »
+                                        « @lang('auth.cmnt_3') »
 
                                     </p>
                                     
@@ -1211,7 +1227,7 @@
                                         <div class="cont"> <span><i class="star-rating"></i><i
                                                     class="star-rating"></i><i class="star-rating"></i><i
                                                     class="star-rating"></i><i class="star-rating"></i></span>
-                                            <h6>Roya S.</h6> <span>Guest review</span>
+                                            <h6>Roya S.</h6> <span>@lang('auth.gr')</span>
                                         </div>
                                     </div>
                                 </div>
@@ -1228,7 +1244,7 @@
             <div class="row">
                 <div class="col-md-6 p-0 animate-box" data-animate-effect="fadeInLeft">
                     <div class="img left">
-                        <a href="restaurant.html"><img src="{{asset('images/1_5.jpg')}}" alt></a>
+                        <a href="/{{app()->getLocale()}}/tour-plans/1"><img src="{{asset('images/1_5.jpg')}}" alt></a>
                     </div>
                 </div>
                 <div class="col-md-6 p-0 bg-cream valign animate-box" data-animate-effect="fadeInRight">
@@ -1260,14 +1276,14 @@
                 </div>
                 <div class="col-md-6 p-0 order1 animate-box" data-animate-effect="fadeInRight">
                     <div class="img">
-                        <a href="spa-wellness.html"><img src="{{asset('images/3_2.jpg')}}" alt></a>
+                        <a href="/{{app()->getLocale()}}/tour-plans/2"><img src="{{asset('images/3_2.jpg')}}" alt></a>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 p-0 animate-box" data-animate-effect="fadeInLeft">
                     <div class="img left">
-                        <a href="spa-wellness.html"><img src="{{asset('images/2_3.jpg')}}" alt></a>
+                        <a href="/{{app()->getLocale()}}/tour-plans/3"><img src="{{asset('images/2_3.jpg')}}" alt></a>
                     </div>
                 </div>
                 <div class="col-md-6 p-0 bg-cream valign animate-box" data-animate-effect="fadeInRight">

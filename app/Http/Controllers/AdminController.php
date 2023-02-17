@@ -9,6 +9,7 @@ use App\Models\Destination;
 use App\Models\Admin;
 use App\Models\Promotion;
 use Session;
+use Auth;
 
 class AdminController extends Controller
 {
@@ -29,7 +30,7 @@ class AdminController extends Controller
             return redirect('en/app');
         } else {
             Session()->flash('status', 'Invalid Username or Password');
-            return redirect('/signin');
+            return redirect('en/signin');
         }
     }
 
@@ -79,6 +80,13 @@ class AdminController extends Controller
         } else {
             return redirect('signin');
         }
+    }
+
+    function logOutUser() {
+        Auth::logout();
+        Session::forget('member');
+        
+        return redirect('/');
     }
 
     function getCompletedOrders() {

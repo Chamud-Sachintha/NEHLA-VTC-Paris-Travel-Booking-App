@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>The NEHLA VTC Paris - THE NEHLA LUXURY TRANSPORT</title>
-    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="shortcut icon" href="{{asset('images/favicon.png')}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow&amp;family=Barlow+Condensed&amp;family=Gilda+Display&amp;display=swap">
@@ -54,13 +54,13 @@
                     <div class="reservations mb-30">
                         <div class="icon"><span class="flaticon-call"></span></div>
                         <div class="text">
-                            <p>@lang('auth.reservation')</p> <a href="tel:855-100-4444">+33 6 36 20 35 62</a>
+                            <p>@lang('auth.reservation')</p> <a href="tel:33 6 36 20 35 62">+33 6 36 20 35 62</a>
                         </div>
                     </div>
                     <div class="reservations mb-30">
                         <div class="icon"><span class="flaticon-envelope"></span></div>
                         <div class="text">
-                            <p>@lang('auth.email_info')</p> <a href="mailto:info@luxuryhotel.com">contact@nehlavtcparis.com</a>
+                            <p>@lang('auth.email_info')</p> <a href="mailto:contact@nehlavtcparis.com">contact@nehlavtcparis.com</a>
                         </div>
                     </div>
                     {{-- <div class="reservations">

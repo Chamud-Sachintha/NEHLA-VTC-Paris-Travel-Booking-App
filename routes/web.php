@@ -33,7 +33,11 @@ Route::group(['prefix' => '{locale}'], function () {
         return view('contact');
     })->name('contact-us')->middleware('setLocale');
 
-    Route::get('/tour-plans/{tour_id}', [TourPlanController::class, 'showTourPlanPageWithData'])->middleware('setLocale');;
+    Route::get('/tour-plans/{tour_id}', [TourPlanController::class, 'showTourPlanPageWithData'])->middleware('setLocale');
+
+    Route::get('/privacy-policy', function() {
+        return view('privacy_policy');
+    })->name('privacy-policy')->middleware('setLocale');
 });
 
 Route::get('/', function(){
@@ -109,3 +113,9 @@ Route::post('/updateVehicleDetailsById', [VehicleController::class, 'updateVehic
 Route::get('/deleteDestinationById/{id}', [DestinationController::class, 'deleteSelectedPlaceById']);
 
 Route::post('/updateDestinationById', [DestinationController::class , 'updateSelectedPlaceById']);
+
+Route::get('/app/contact-messages', [ContactMessageController::class, 'showContactMessagePage']);
+
+Route::get('/deleteContactMessage/{id}', [ContactMessageController::class, 'deleteContactMessageById']);
+
+Route::get('/app/signout', [AdminController::class, 'logOutUser']);

@@ -33,5 +33,24 @@ class ContactMessageController extends Controller
             Session()->flash('status', 'Please Fill All Feilds.');
             return Redirect::back();
         }
-    }   
+    }
+
+    public  function showContactMessagePage() {
+
+        if (Session()->has('member')) {
+            $messages = ContactMessage::all();
+            return view('contact_messages')->with(['all_messages' => $messages]);
+        } else {
+            Session()->flash('status', 'Access Denied.');
+            return redirect('/signin');
+        }
+    }
+
+    public function deleteContactMessageById($id) {
+
+        ContactMessage::where(['id' => $id])->delete();
+
+        Session()->flash('status', 'Delete Successfully.');
+        return redirect()->back();
+    }
 }

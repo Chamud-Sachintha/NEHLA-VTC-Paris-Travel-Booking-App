@@ -78,7 +78,16 @@
                             <p>Selected Tour Plan :</p>
                         </div>
                         <div class="col-10">
-                            <p style="float: left">{{ ($data['tour_id'] == "1" ? "The Normandy Tour" : $data['tour_id'] == "2") ? "The Europe Tour" : "The Paris Tour" }}</p>
+                            {{-- {{ dd($data['tour_id']); }} --}}
+                            <p style="float: left">
+                                @if ($data['tour_id'] == "1")
+                                    The Normandy Tour
+                                @elseif ($data['tour_id'] == "2")
+                                    The Europe Tour
+                                @else
+                                    The Paris Tour
+                                @endif
+                            </p>
                         </div>
                     </div>
                 </div>

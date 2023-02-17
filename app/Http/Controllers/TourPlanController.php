@@ -269,6 +269,7 @@ class TourPlanController extends Controller
                         [
                             'name'=>'14. Dieppe',
                             'description'=>'Le tenter, c\'est l\'adopter, disent ses fans. Dieppe méconnue ne manque en effet pas d\'attraits. Outre son ambiance qui sait être à la fois port et station balnéaire, et ses activités sur terre et sur mer, la ville se distingue par son patrimoine : cœur historique en partie piétonnier, superbe église Saint-Jacques, quartier du Pollet aux vieilles maisons de pêcheurs en briques… Ajoutons une arme secrète de la ville et de ses environs : les ciels qui ont inspiré les plus grands artistes, notamment Delacroix et Monet.',
+                            'advice'=>null
                         ],
                         [
                             'name'=>'15. Barfleur',
@@ -399,8 +400,8 @@ class TourPlanController extends Controller
     }
 
     function showAllRequestedTourPlans() {
-        $tour_plans = TourPlan::all();
-
+        $tour_plans = TourPlan::orderBy('created_at', 'DESC')->get();
+    
         if (Session()->has('member')) {
             return view ('view_tour_plan_requests')->with(['requsts'=>$tour_plans]);
         } else {

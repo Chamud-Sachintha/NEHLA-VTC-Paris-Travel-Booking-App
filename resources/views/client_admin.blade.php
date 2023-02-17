@@ -32,7 +32,7 @@
             </div>
             <ul class="list-unstyled components mb-5">
                 <li class="active">
-                    <a href="/app"><span class="fa fa-home mr-3"></span> All Bookings</a>
+                    <a href="/en/client"><span class="fa fa-home mr-3"></span> All Bookings</a>
                 </li>
             </ul>
         

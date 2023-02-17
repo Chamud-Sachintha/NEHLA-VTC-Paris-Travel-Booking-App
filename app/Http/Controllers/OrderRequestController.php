@@ -15,6 +15,7 @@ class OrderRequestController extends Controller
                             ->join('clients', 'order_details.customer_id', '=', 'clients.id')
                             ->where('order_status', 'pending')
                             ->where('payment_status', 'paid')
+                            ->orderBy('order_details.created_at', 'DESC')
                             ->get();
         return view('order_requests')->with(['order_details'=>($order_details->toArray())]);
     }

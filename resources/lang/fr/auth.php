@@ -23,6 +23,7 @@ return [
     'nav_vehicles'=>'Nos Véhicules',
     'nav_tours'=>'Nos Excursions',
     'nav_contact'=>'Contact',
+    'nav_privacy' => 'Legacy Note',
 
     //main slider
     // first
@@ -35,7 +36,7 @@ return [
 
     //third
     't_subtitle'=>'Des Chauffeurs Experimentes',
-    't_title'=>'Profitez Profitez D\'un Trajet Tout Confort Et En Toute Securite',
+    't_title'=>'Trajet Tout Confort Et En Toute Securite',
 
     //slider common
     'reservation'=>'Réservation',
@@ -118,12 +119,16 @@ return [
     'card_1_desc'=>'Détendez vous à bord de nos véhicules équipés de boissons.',
     'card_2_title'=>'Siège bébé sur demande',
     'card_2_desc'=>'Vous voyagez avec un bébé ? Précisez le nous lors de votre réservation et nous équiperons le véhicule d’un siège bébé pour garantir la sécurité de votre bébé.',
-    'card_3_title'=>'Charger',
+    'card_3_title'=>'Chargeur',
     'card_3_desc'=>'Parce que nos smartphones nous sont indispensables, nos véhicules sont tous équipés de cable pour charger vos smartphones.',
 
     //6th section
-    'testimonials'=>'Avis Clients',
-    'client_say'=>'Nos retours clients',
+    'testimonials'=>'TÉMOIGNAGES',
+    'client_say'=>'Que disent les clients ?',
+    'cmnt_1' => 'Chauffeur à l\'heure, trajet au top, super gentil rien a dire. Trajet au top ! Très heureuse d\'avoir fait appel à vos services. Et à très bientôt ! ',
+    'cmnt_2' => 'Chauffeur professionnel et faisant preuve d’une grande gentillesse. Véhicule propre avec eau !',
+    'cmnt_3' => 'Première expérience avec cette entreprise NEHLA VTC.Prestation demandée satisfaite avec succès.Chauffeur à l\'heure, aimable, courtois et serviable 👍 Je recommande sans hésiter.',
+    'gr' => 'Avis d\'invité',
 
     //7th section
     'discover'=>'Excursion en Normandie',
@@ -145,26 +150,45 @@ return [
 
      // about page
 
-     'about_sub_title'=>'Le Transport de Luxe NEHLA VTC',
-     'about_title'=>'À propos de nous',
-     'about_title_2'=>'Profitez d\'une expérience de luxe',
-     'about_desc'=>'NEHLA VTC PARIS est une société française proposant une plateforme de réservation de transport VTC en ligne de qualité à des prix imbattables. Nous développons nos services chaque jour pour vous offrir un service supérieur. Notre équipe conçoit des solutions simples de transport privé avec pour objectif principal une grande qualité de service et la sécurité des passagers. Engagé pour l\'environnement mais aussi pour les conditions de travail de nos chauffeurs, NEHLA VTC PARIS paie ses taxes... en France bien sûr!',
-     'about_title_3'=>'VTC ou Taxi ? Voici tous les avantages de choisir un chauffeur VTC :',
-     'about_li_1'=>'Prix ​​fixé à l\'avance et pas de surprise à l\'arrivée ! C\'est la différence avec un trajet en taxi.',
-     'about_li_2'=>'Un Service Premium avec nos chauffeurs expérimentés, voyagez en toute sérénité.',
-     'about_li_3'=>'Réservez à l\'avance et retrouvez le goût d\'un service fiable et nous garantissons la ponctualité.',
-     'about_li_4'=>'Véhicule équipé d\'eau, chargeur, radio et bien d\'autres services pour vous offrir un voyage dans le plus grand confort.',
- 
-     // contact page
-     'get_in_touch'=>' Nous contacter',
-     'contact_us'=>'Nous contacter',
-     'contact_title'=>'NEHLA VTC Paris',
-     'contact_desc'=>'Une question ? Une demande spéciale à nous soumettre ? Notre équipe se tient à votre disposition pour répondre à toutes vos interrogations.',
-     'email_info'=>'Contactez nous par mail',
-     'form_name'=>' Nom / Prénom',
-     'form_email'=>'Email',
-     'form_mobile'=>'Numéro de téléphone',
-     'message'=>'Votre message',
-     'subject'=>'Sujet',
-     'send_message'=>'Envoyer'
+    'about_sub_title'=>'Le Transport de Luxe NEHLA VTC',
+    'about_title'=>'À propos de nous',
+    'about_title_2'=>'Profitez d\'une expérience de luxe',
+    'about_desc'=>'NEHLA VTC PARIS est une société française proposant une plateforme de réservation de transport VTC en ligne de qualité à des prix imbattables. Nous développons nos services chaque jour pour vous offrir un service supérieur. Notre équipe conçoit des solutions simples de transport privé avec pour objectif principal une grande qualité de service et la sécurité des passagers. Engagé pour l\'environnement mais aussi pour les conditions de travail de nos chauffeurs, NEHLA VTC PARIS paie ses taxes... en France bien sûr!',
+    'about_title_3'=>'VTC ou Taxi ? Voici tous les avantages de choisir un chauffeur VTC :',
+    'about_li_1'=>'Prix ​​fixé à l\'avance et pas de surprise à l\'arrivée ! C\'est la différence avec un trajet en taxi.',
+    'about_li_2'=>'Un Service Premium avec nos chauffeurs expérimentés, voyagez en toute sérénité.',
+    'about_li_3'=>'Réservez à l\'avance et retrouvez le goût d\'un service fiable et nous garantissons la ponctualité.',
+    'about_li_4'=>'Véhicule équipé d\'eau, chargeur, radio et bien d\'autres services pour vous offrir un voyage dans le plus grand confort.',
+
+    // contact page
+    'out_contact_details' => 'Nos coordonnées',
+    'get_in_touch'=>' Nous contacter',
+    'contact_us'=>'Nous contacter',
+    'contact_title'=>'NEHLA VTC Paris',
+    'contact_desc'=>'Une question ? Une demande spéciale à nous soumettre ? Notre équipe se tient à votre disposition pour répondre à toutes vos interrogations.',
+    'email_info'=>'Contactez nous par mail',
+    'form_name'=>' Nom / Prénom',
+    'form_email'=>'Email',
+    'form_mobile'=>'Numéro de téléphone',
+    'message'=>'Votre message',
+    'subject'=>'Sujet',
+    'send_message'=>'Envoyer',
+    'address'=>'adresse',
+
+    'privacy_title' => 'Mentions légales',
+    'p1' => 'NEHLA VTC PARIS est une société individuelle, immatriculée au Registre du Commerce et des Sociétés de Paris sous le n° 920 450 152 dont le siège social est 28, rue Tristan Tzara 75018 Paris, représentée par son représentant légal en exercice, domicilié en cette qualité audit siège, dûment habilité à l’effet des présentes.',
+    'p2' => 'Le directeur de publication est Madame Nethra JAYASURIYA en qualité de gérante de la société NEHLA VTC PARIS.',
+    'p3' => 'Le site WWW.NEHLAVTCPARIS.COM est hébergé par la société Hostings.',
+    'p4' => 'Pour toute réclamation concernant ce site, vous pouvez contacter la société NEHLA VTC PARIS par voie électronique à l\'adresse suivante : contact(@)nehlavtcparis.com.',
+    'p5' => 'Données personnelles :',
+    'p6' => 'Conformément à la loi Informatique et Libertés du 6 janvier 1978 modifiée par la loi du 6 août 2004 relative à la protection des personnes physiques à l\'égard des traitements des données à caractère personnel, tout utilisateur du site dispose, à tout moment, d\'un droit d\'accès, de modification, de rectification ou de suppression des données qui le concernent. Pour cela, l’utilisateur pourra consulter et modifier ces données via le site www.nehlatvcparis.com directement ou devra faire sa demande soit par voie électronique à l\'adresse suivante : contact@nehlavtcparis.com ou par voie postale à l\'adresse suivante 28, rue Tristan Tzara 75018 Paris.',
+    'p7' => 'Contenu des informations stockées :',
+    'p8' => 'Conformément à l’article 6 de la loi du 21 juin 2004 pour la confiance dans l’économie numérique, en sa qualité d’hébergeur, Hostings est légalement tenu de mettre en place un dispositif facilement accessible et visible, permettant à quiconque de porter à sa connaissance la diffusion, via le Site, du contenu portant sur : l’apologie de crimes contre l’humanité l’incitation à la haine raciale la pornographie enfantine l’incitation à la violence l’atteinte à la dignité humaine. Vous pouvez également adresser un courrier circonstancié à notre société précisant la date, votre identité, l\'adresse URL du contenu litigieux, sa description et l\'identifiant de son auteur.',
+    'p9' => 'Suivant réception, par la société NEHLA VTC PARIS, d\'un signalement adressant les infractions visées ci-avant, le contenu concerné fera immédiatement l\'objet d\'une suppression du Site et d\'une information des autorités publiques compétentes.',
+    'p10' => 'A toutes fins utiles, il est rappelé que le fait, pour toute personne, de présenter un contenu ou une activité comme étant illicite dans le but d\'en obtenir le retrait ou d\'en faire cesser la diffusion, alors qu\'elle sait cette information inexacte, est puni d\'un an d\'emprisonnement et de 15.000 euros d\'amende.',
+    'p11' => 'Cookies :',
+    'p12' => 'Le site Internet www.nehlavtcparis.com peut collecter des informations de manière automatique par l\'utilisation de « cookies » (ou témoins de connexion) qui permettent de suivre votre navigation sur le site. Un cookie ne permet pas à la société NEHLA VTC PARIS de Vous identifier ; en revanche, il enregistre des informations relatives à la navigation de votre ordinateur sur le site www.nehlavtcparis.com afin d\'établir les paramètres de la session durant votre connexion. Ces cookies permettent au site www.nehlavtcparis.com de traiter vos demandes et d\'assurer le bon fonctionnement du site Internet. Le site www.nehlavtcparis.com utilise notamment les cookies pour mémoriser vos coordonnées lors de votre identification afin que Vous n\'ayez plus à les fournir par la suite (cette mémorisation est optionnelle et Vous restez libre de modifier vos coordonnées ultérieurement). Vous avez toujours la possibilité de désactiver ou d\'empêcher le placement de ces cookies ou d\'être informé de leur création en configurant votre navigateur à travers un menu « options Internet », « préférences » ou « sécurité ». La société NEHLA VTC PARIS Vous invite à consulter la rubrique « aide » de votre navigateur Internet pour en savoir plus sur la façon de paramétrer ces fonctions.',
+    'p13' => 'Contenu du Site www.nehlavtcparis.com:',
+    'p14' => 'Le contenu du site www.nehlavtcparis.com, la structure générale, les textes, les images, animées ou non, et les sons dont il est composé sont la propriété exclusive de la société NEHLA VTC PARIS. Toute exploitation totale ou partielle du site Internet www.nehlavtcparis.com, par quelques procédés que ce soient, est interdite et constituerait une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la Propriété intellectuelle.',
+    'p15' => 'Tous droits réservés © 2022 NEHLA VTC PARIS',
 ];

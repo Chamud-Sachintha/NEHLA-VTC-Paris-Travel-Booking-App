@@ -36,14 +36,6 @@ class VehicleController extends Controller
                 'description' => $description,
             ]);
 
-            // $vehicle_table->brand = $brand_name;
-            // $vehicle_table->model = $model_name;
-            // $vehicle_table->seats = $seat_count;
-            // $vehicle_table->image = $get_thumbnail_file_name;
-            // $vehicle_table->description = $description;
-
-            // $vehicle_table->save();
-
             Session()->flash('status', 'Operation Complete.');
             return Redirect::back();
         } else {

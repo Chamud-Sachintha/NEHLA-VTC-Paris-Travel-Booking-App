@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="{{asset('admin/css/style.css')}}">
     <meta http-equiv="refresh" content="30">
 </head>
@@ -27,7 +28,7 @@
             
             <div class="row">
                 <div class="col-12">
-                    <table class="table">
+                    <table class="table" id="example">
                         <thead>
                           <tr>
                             <th scope="col">Full Name</th>
@@ -67,4 +68,13 @@
     <script src="{{ asset('admin/js/popper.js')}}"></script>
     <script src="{{asset('admin/js/bootstrap.min.js')}}"></script>
     <script src="{{asset('admin/js/main.js')}}"></script>
+    <script src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.2/js/dataTables.bootstrap5.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var table = $('#example').DataTable({
+                pageLength: 20
+            });
+        });
+    </script>
 </body>

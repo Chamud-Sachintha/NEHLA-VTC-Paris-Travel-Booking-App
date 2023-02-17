@@ -17,6 +17,7 @@
                             <li><a href="/{{app()->getLocale()}}/#ourVehicles">@lang('auth.nav_vehicles')</a></li>
                             <li><a href="/{{app()->getLocale()}}/#specialTours">@lang('auth.nav_tours')</a></li>
                             <li><a href="/{{app()->getLocale()}}/contact-us">@lang('auth.nav_contact')</a></li>
+                            <li><a href="/{{app()->getLocale()}}/privacy-policy">@lang('auth.nav_privacy')</a></li>
                         </ul>
                     </div>
                 </div>
@@ -26,15 +27,15 @@
                         {{-- <p class="footer-contact-text">28, rue Tristan Tzara 75018<br>Paris --}}
                         </p>
                         <div class="footer-contact-info">
-                            <p class="footer-contact-phone"><span class="flaticon-call"></span> +33 6 36 20 35 62</p>
-                            <p class="footer-contact-mail">contact@nehlavtcparis.com </p>
+                            <p class="footer-contact-phone"><a href="tel:33 6 36 20 35 62"><span class="flaticon-call"></span> +33 6 36 20 35 62</p></a>
+                            <p class="footer-contact-mail"><a href="mailto:contact@nehlavtcparis.com">contact@nehlavtcparis.com</a> </p>
                         </div>
                         <div class="footer-about-social-list">
-                            <a href="https://instagram.com/nehlavtcparis?igshid=YmMyMTA2M2Y="><i class="ti-instagram"></i></a>
+                            <a href="https://instagram.com/nehlavtcparis?igshid=YmMyMTA2M2Y=" target="_blank"><i class="ti-instagram"></i></a>
                             {{-- <a href="#"><i class="ti-twitter"></i></a>
                             <a href="#"><i class="ti-youtube"></i></a> --}}
-                            <a href="https://www.linkedin.com/mwlite/company/nehla-vtc-paris"><i class="ti-linkedin"></i></a>
-                            <a href="https://www.facebook.com/nehlavtcparis"><i class="ti-facebook"></i></a>
+                            <a href="https://www.linkedin.com/company/nehla-vtc-paris/" target="_blank"><i class="ti-linkedin"></i></a>
+                            <a href="https://www.facebook.com/nehlavtcparis" target="_blank"><i class="ti-facebook"></i></a>
                             {{-- <a href="#"><i class="ti-pinterest"></i></a> --}}
                         </div>
 
@@ -55,7 +56,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="footer-bottom-inner">
-                        <p class="footer-bottom-copy-right">© Copyright 2022 All Right Received by nehlavtcparis.com, Design & Developed by <a href="http://www.builtonus.com">BuiltOnUs.com</a>.</p>
+                        <p class="footer-bottom-copy-right">© Copyright 2023 All Right Received by nehlavtcparis.com, Design & Developed by <a href="http://www.builtonus.com">BuiltOnUs.com</a>.</p>
                     </div>
                 </div>
             </div>

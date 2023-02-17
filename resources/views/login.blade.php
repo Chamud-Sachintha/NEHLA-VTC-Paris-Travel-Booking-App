@@ -19,12 +19,17 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center mb-5">
-                    <h2 class="heading-section">Login #01</h2>
+                    <h2 class="heading-section">Admin Panel - Login</h2>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-7 col-lg-5">
                     <div class="login-wrap p-4 p-md-5">
+                        @if (Session()->has('status'))
+                            <div class="alert alert-danger" role="alert">
+                                {{ Session()->get('status') }}
+                            </div>
+                        @endif
                         <div class="icon d-flex align-items-center justify-content-center">
                             <span class="fa fa-user-o"></span>
                         </div>
