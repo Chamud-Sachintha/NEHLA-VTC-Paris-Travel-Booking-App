@@ -18,6 +18,7 @@
                 <li class="nav-item"><a class="nav-link" href="{{ route('about-us', app()->getLocale()) }}">@lang('auth.nav_about')</a></li>
                 <li class="nav-item"><a class="nav-link" href="/{{ app()->getLocale() }}/#ourVehicles">@lang('auth.nav_vehicles')</a></li>
                 <li class="nav-item"><a class="nav-link" href="/{{ app()->getLocale() }}/#specialTours">@lang('auth.nav_tours')</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('olympic-info', app()->getLocale()) }}">@lang('auth.menu_olympic')</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('contact-us', app()->getLocale()) }}">@lang('auth.nav_contact')</a></li>
                 
                 <li class="nav-item">

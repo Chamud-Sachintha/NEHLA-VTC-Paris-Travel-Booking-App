@@ -22,6 +22,7 @@ return [
     'nav_about'=>'Qui Sommes Nous',
     'nav_vehicles'=>'Nos Véhicules',
     'nav_tours'=>'Nos Excursions',
+    'menu_olympic' => 'Jeux Olympiques',
     'nav_contact'=>'Contact',
     'nav_privacy' => 'Legacy Note',
 

@@ -38,6 +38,10 @@ Route::group(['prefix' => '{locale}'], function () {
     Route::get('/privacy-policy', function() {
         return view('privacy_policy');
     })->name('privacy-policy')->middleware('setLocale');
+
+    Route::get('/olympic-info', function() {
+        return view('olympic_info');
+    })->name('olympic-info')->middleware('setLocale');
 });
 
 Route::get('/', function(){

@@ -420,7 +420,7 @@
                 <div class="icon d-flex justify-content-center align-items-center">
                     <i class="flaticon-call"></i>
                 </div>
-                <div class="call"><span>+33 6 36 20 35 62</span> <br>@lang('auth.reservation')</div>
+                <div class="call"><span>+33 0 76 05 58 946</span> <br>@lang('auth.reservation')</div>
             </a>
         </div>
     </header>

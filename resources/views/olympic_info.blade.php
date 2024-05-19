@@ -5,16 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>The NEHLA VTC Paris - THE NEHLA LUXURY TRANSPORT</title>
-    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="shortcut icon" href="{{asset('images/favicon.png')}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow&amp;family=Barlow+Condensed&amp;family=Gilda+Display&amp;display=swap">
-    <link rel="stylesheet" href="{{asset('css/plugins.css')}}">
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('tour_plan/css/plugins.css')}}">
+    <link rel="stylesheet" href="{{asset('tour_plan/css/style.css')}}">
     <style>
-        .bg-fixed {
-            background-attachment: scroll;
-            background-position: center;
+        .footer-about-social-list a {
+            color: #aa8453; !important
         }
     </style>
 </head>
@@ -33,67 +32,59 @@
         </svg>
     </div>
     <!-- Navbar -->
-    {{View::make('header')}}
-    <!-- Header Banner -->
-    <div class="banner-header section-padding valign bg-img bg-fixed" data-overlay-dark="4" data-background="{{asset('images/4_2.jpg')}}">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 caption mt-90">
-                    <h5>@lang('auth.about_sub_title')</h5>
-                    <h1>@lang('auth.about_title')</h1>
-                </div>
-            </div>
+    {{ View::make('header') }}
+    <!-- Spa-Wellness Slider -->
+    <header class="header slider">
+        <div class="owl-carousel owl-theme">
+            <div class="text-center item bg-img" data-overlay-dark="3" data-background="{{ asset('images/olympic_background.jpg') }}"></div>
         </div>
-    </div>
-    <!-- About -->
-    <section class="about section-padding">
+        <!-- arrow down -->
+        <div class="arrow bounce text-center">
+            <a href="#" data-scroll-nav="1" class> <i class="ti-arrow-down"></i> </a>
+        </div>
+    </header>
+    <!-- Spa-Wellness Content -->
+    <section class="rooms-page section-padding" data-scroll-index="1">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 mb-30 animate-box" data-animate-effect="fadeInUp"> 
-                    <span>
-                        <i class="star-rating"></i>
-                        <i class="star-rating"></i>
-                        <i class="star-rating"></i>
-                        <i class="star-rating"></i>
-                        <i class="star-rating"></i>
-                    </span>
-                    <div class="section-subtitle">@lang('auth.about_sub_title')</div>
-                    <div class="section-title">@lang('auth.about_title_2')</div>
-                    <p>@lang('auth.about_desc')</p>
-                    <!-- reservation -->
-                    <div class="reservations">
-                        <div class="icon"><span class="flaticon-call"></span></div>
-                        <div class="text">
-                            <p>@lang('auth.reservation')</p> <a href="tel:+33 0 76 05 58 946">+33 0 76 05 58 946</a>
-                        </div>
-                    </div>
+                <div class="col-md-12"> <span><i class="star-rating"></i><i class="star-rating"></i><i class="star-rating"></i><i class="star-rating"></i><i class="star-rating"></i></span>
+                    <div class="section-subtitle">@lang('olympic.topHeading')</div>
+                    <div class="section-title">@lang('olympic.heading')</div>
+
+                    <p class="mb-30">@lang('olympic.field_1')</p>
+
+                    <ul>
+                        <li>@lang('olympic.biligual_drivers')</li>
+                        <li>@lang('olympic.optimized_routes')</li>
+                        <li>@lang('olympic.high_end_services')</li>
+                    </ul>
+
+                    <div class="section-title">@lang('olympic.second_heading')</div>
+                    <p class="mb-30">@lang('olympic.second_heading_desc')</p>
+                    <p class="mb-30">@lang('olympic.second_heading_second_desc')</p>
+
+                    <p class="mb-30">@lang('olympic.comfort_and_conv')</p>
+                    <p class="mb-30">@lang('olympic.reliability_and_punc')</p>
+                    <p class="mb-30">@lang('olympic.shedule_flexibility')</p>
+                    <p class="mb-30">@lang('olympic.personalized_service')</p>
+
+                    <div class="section-title">@lang('olympic.third_heading')</div>
+                    <p class="mb-30">@lang('olympic.third_heading_desc')</p>
+
+                    <p class="mb-30">@lang('olympic.offred_text')</p>
+
+                    <p class="mb-30">@lang('olympic.offer_1')</p>
+                    <p class="mb-30">@lang('olympic.offer_2')</p>
+                    <p class="mb-30">@lang('olympic.offer_3')</p>
+                    <p class="mb-30">@lang('olympic.offer_4')</p>
+                    <p class="mb-30">@lang('olympic.offer_5')</p>
+
+                    <p class="mb-30">@lang('olympic.offer_footer')</p>
                 </div>
-                <div class="col col-md-3 animate-box" data-animate-effect="fadeInUp"> <img src="{{asset('images/ab1.jpg')}}" alt > </div>
-                <div class="col col-md-3 animate-box" data-animate-effect="fadeInUp"> <img src="{{asset('images/ab2.jpg')}}" alt class="mt-90 mb-30"> </div>
             </div>
         </div>
     </section>
     
-    <section class="about section-padding" style="margin-top: -30px; padding-top: 0px; !important;">
-        <div class="container">
-            <div class="row">
-                <h1>@lang('auth.about_title_3')</h1>
-            </div>
-            <div class="row">
-                <p>@lang('auth.about_li_1')</p>
-            </div>
-            <div class="row">
-                <p>@lang('auth.about_li_2')</p>
-            </div>
-            <div class="row">
-                <p>@lang('auth.about_li_3')</p>
-            </div>
-            <div class="row">
-                <p>@lang('auth.about_li_4')</p>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     {{View::make('footer')}}
     <!-- jQuery -->
@@ -117,7 +108,7 @@
     <script src="{{asset('contact/js/custom.js')}}"></script>
 
     <script>
-        // header scroll event trigger
+                // header scroll event trigger
         //have to add nav-scroll class
 
         window.onscroll = function() {myFunction()};
@@ -158,6 +149,6 @@
                 logoParent.appendChild(img);
             }
         }
-        </script>
+    </script>
 </body>
 </html>

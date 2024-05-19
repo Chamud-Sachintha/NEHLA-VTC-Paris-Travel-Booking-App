@@ -138,7 +138,7 @@
                                     <div class="reservations mb-30">
                                         <div class="icon"><span class="flaticon-call"></span></div>
                                         <div class="text">
-                                            <p>@lang('auth.reservation')</p> <a href="tel:33 6 36 20 35 62">+33 6 36 20 35 62</a>
+                                            <p>@lang('auth.reservation')</p> <a href="tel:33 6 36 20 35 62">+33 0 76 05 58 946</a>
                                         </div>
                                     </div>
                                     <div class="reservations mb-30">

@@ -22,6 +22,7 @@ return [
     'nav_about'=>'About',
     'nav_vehicles'=>'Vehicles',
     'nav_tours'=>'Special Tours',
+    'menu_olympic' => 'Paris Olympics',
     'nav_contact'=>'Contact',
     'nav_privacy' => 'Legacy Note',
 
