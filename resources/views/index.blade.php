@@ -416,7 +416,7 @@
         </div>
         <!-- slider reservation -->
         <div class="reservation">
-            <a href="tel:33 6 36 20 35 62">
+            <a href="tel:33 0 76 05 58 946">
                 <div class="icon d-flex justify-content-center align-items-center">
                     <i class="flaticon-call"></i>
                 </div>
@@ -1193,7 +1193,7 @@
                                     <span class="quote"><img src="images/quot.png" alt></span>
                                     <p>" @lang('auth.cmnt_1') "</p>
                                     <div class="info">
-                                        <div class="author-img"> <img src="images/1_1.jpg" alt> </div>
+                                        <div class="author-img"> <img src="{{asset('images/user.png')}}" style="background-attachment: fixed; background-size: cover" alt> </div>
                                         <div class="cont"> <span><i class="star-rating"></i><i
                                                     class="star-rating"></i><i class="star-rating"></i><i
                                                     class="star-rating"></i><i class="star-rating"></i></span>
@@ -1206,7 +1206,7 @@
                                     <p>" @lang('auth.cmnt_2') "</p>
 
                                     <div class="info">
-                                        <div class="author-img"> <img src="images/1_1.jpg" alt> </div>
+                                        <div class="author-img"> <img src="{{asset('images/user.png')}}" style="background-attachment: fixed; background-size: cover" alt> </div>
                                         <div class="cont"> <span><i class="star-rating"></i><i
                                                     class="star-rating"></i><i class="star-rating"></i><i
                                                     class="star-rating"></i><i class="star-rating"></i></span>
@@ -1223,7 +1223,7 @@
                                     </p>
                                     
                                     <div class="info">
-                                        <div class="author-img"> <img src="images/5.jpg" alt> </div>
+                                        <div class="author-img"> <img src="{{asset('images/user.png')}}" style="background-attachment: fixed; background-size: cover" alt> </div>
                                         <div class="cont"> <span><i class="star-rating"></i><i
                                                     class="star-rating"></i><i class="star-rating"></i><i
                                                     class="star-rating"></i><i class="star-rating"></i></span>

@@ -24,7 +24,7 @@ return [
     'nav_tours'=>'Nos Excursions',
     'menu_olympic' => 'Jeux Olympiques',
     'nav_contact'=>'Contact',
-    'nav_privacy' => 'Legacy Note',
+    'nav_privacy' => 'Mentions légales',
 
     //main slider
     // first

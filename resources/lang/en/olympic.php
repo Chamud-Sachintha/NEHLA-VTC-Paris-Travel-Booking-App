@@ -5,9 +5,9 @@ return [
     "heading" => 'Our private transport services for the Paris 2024 Olympics',
     "field_1" => 'For the Paris 2024 Olympic Games, NEHLA VTC PARIS offers a range of private transport services to meet the needs of visitors and spectators.',
 
-    "biligual_drivers" => "Chauffeurs bilingues",
-    "optimized_routes" => "Parcours optimisés",
-    "high_end_services" => "Services haut de gamme",
+    "biligual_drivers" => "Bilingual drivers",
+    "optimized_routes" => "Optimized routes",
+    "high_end_services" => "High-end services",
 
     "second_heading" => 'How To Travel During The 2024 Olympic Games',
 

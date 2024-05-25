@@ -53,11 +53,52 @@
 
                     <p class="mb-30">@lang('olympic.field_1')</p>
 
-                    <ul>
-                        <li>@lang('olympic.biligual_drivers')</li>
-                        <li>@lang('olympic.optimized_routes')</li>
-                        <li>@lang('olympic.high_end_services')</li>
-                    </ul>
+                    <div class="row mb-3">
+                        <div class="col-4">
+                            <div class="d-flex px-3 p-3" style="border: 1px solid black">
+                                <div>
+                                    <div class="icon icon-sm icon-secondary">
+                                        <span>
+                                            <img src="{{ asset('images/icon1.jpg') }}" alt="">
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="ps-4">
+                                    <h3 class="h5 mt-3">@lang('olympic.biligual_drivers')</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <div class="d-flex px-3 p-3" style="border: 1px solid black">
+                                <div>
+                                    <div class="icon icon-sm icon-secondary">
+                                        <span>
+                                            <img src="{{ asset('images/icon2.jpg') }}" alt="">
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="ps-4">
+                                    <h3 class="h5 mt-3">@lang('olympic.optimized_routes')</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <div class="d-flex px-3 p-3" style="border: 1px solid black">
+                                <div>
+                                    <div class="icon icon-sm icon-secondary">
+                                        <span>
+                                            <img src="{{ asset('images/icon3.jpg') }}" alt="" style="width: 70px; height: 65px">
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="ps-4">
+                                    <h3 class="h5 mt-3">@lang('olympic.high_end_services')</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="section-title">@lang('olympic.second_heading')</div>
                     <p class="mb-30">@lang('olympic.second_heading_desc')</p>
