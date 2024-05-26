@@ -21,12 +21,12 @@ return [
                                     pratique pour faciliter les déplacements pendant les Jeux olympiques de Paris 2024.
                                     Voici quelques avantages de cette option :",
 
-    "comfort_and_conv" => "**Confort et commodité** : Avec un chauffeur privé, vous pouvez éviter les tracas
+    "comfort_and_conv" => "1. **Confort et commodité** : Avec un chauffeur privé, vous pouvez éviter les tracas
                             liés à la recherche d'un taxi ou à l'utilisation des transports en commun. Vous serez
                             pris en charge directement à votre lieu de résidence ou à un endroit désigné, et vous
                             pourrez vous détendre et profiter du trajet en toute tranquillité.",
 
-    "reliability_and_punc" => "**Fiabilité et ponctualité** : Les chauffeurs de NEHLA VTC PARIS sont
+    "reliability_and_punc" => "2. **Fiabilité et ponctualité** : Les chauffeurs de NEHLA VTC PARIS sont
                                 professionnels et expérimentés, garantissant des services fiables et ponctuels. Vous
                                 pouvez compter sur eux pour arriver à l'heure et pour vous déplacer efficacement
                                 vers votre destination, que ce soit un site olympique, un restaurant ou un hôtel.",
@@ -36,10 +36,10 @@ return [
                                 morning, late at night or even in the middle of the night, NEHLA VTC PARIS can
                                 meet your needs.",
 
-    "personalized_service" => "4. **Personalized service**: Private drivers offer a personalized service tailored to
-                                your specific needs. Whether you are traveling alone, with family or in a group,
-                                NEHLA VTC PARIS can provide vehicles of different sizes to meet your capacity and
-                                comfort needs.",
+    "personalized_service" => "4. **Service personnalisé** : Les chauffeurs privés offrent un service personnalisé
+                                    adapté à vos besoins spécifiques. Que vous voyagiez seul, en famille ou en groupe,
+                                    NEHLA VTC PARIS peut fournir des véhicules de différentes tailles pour répondre à
+                                    vos besoins en matière de capacité et de confort.",
     
     "third_heading" => "NEHLA VTC PARIS EST LA SOLUTION POUR VOS DÉPLACEMENTS",
 

@@ -36,10 +36,10 @@ return [
                                 morning, late at night or even in the middle of the night, NEHLA VTC PARIS can
                                 meet your needs.",
 
-    "personalized_service" => "4. **Service personnalisé** : Les chauffeurs privés offrent un service personnalisé
-                                adapté à vos besoins spécifiques. Que vous voyagiez seul, en famille ou en groupe,
-                                NEHLA VTC PARIS peut fournir des véhicules de différentes tailles pour répondre à
-                                vos besoins en matière de capacité et de confort.",
+    "personalized_service" => "4. **Personalized service**: Private drivers offer a personalized service tailored to
+                                your specific needs. Whether you are traveling alone, with family or in a group,
+                                NEHLA VTC PARIS can provide vehicles of different sizes to meet your capacity and
+                                comfort needs.",
 
     "third_heading" => "NEHLA VTC PARIS Is The Solution For Your Trip",
     "third_heading_desc" => "Booking a private driver with NEHLA VTC PARIS can offer a convenient and

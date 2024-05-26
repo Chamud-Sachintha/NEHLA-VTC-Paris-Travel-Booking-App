@@ -27,7 +27,7 @@
                         {{-- <p class="footer-contact-text">28, rue Tristan Tzara 75018<br>Paris --}}
                         </p>
                         <div class="footer-contact-info">
-                            <p class="footer-contact-phone"><a href="tel:33 6 36 20 35 62"><span class="flaticon-call"></span> +33 0 76 05 58 946</p></a>
+                            <p class="footer-contact-phone"><a href="tel:+33 0 76 05 58 946"><span class="flaticon-call"></span> +33 0 76 05 58 946</p></a>
                             <p class="footer-contact-mail"><a href="mailto:contact@nehlavtcparis.com">contact@nehlavtcparis.com</a> </p>
                         </div>
                         <div class="footer-about-social-list">

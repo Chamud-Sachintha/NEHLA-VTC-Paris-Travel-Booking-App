@@ -54,12 +54,12 @@
                     <p class="mb-30">@lang('olympic.field_1')</p>
 
                     <div class="row mb-3">
-                        <div class="col-4">
+                        <div class="col-lg-4 col-md-4 col-sm-12 mt-3">
                             <div class="d-flex px-3 p-3" style="border: 1px solid black">
                                 <div>
                                     <div class="icon icon-sm icon-secondary">
                                         <span>
-                                            <img src="{{ asset('images/icon1.jpg') }}" alt="">
+                                            <img src="{{ asset('images/icon3.jpg') }}" alt="" style="width: 70px; height: 65px">
                                         </span>
                                     </div>
                                 </div>
@@ -69,12 +69,12 @@
                             </div>
                         </div>
 
-                        <div class="col-4">
+                        <div class="col-lg-4 col-md-4 col-sm-12 mt-3">
                             <div class="d-flex px-3 p-3" style="border: 1px solid black">
                                 <div>
                                     <div class="icon icon-sm icon-secondary">
                                         <span>
-                                            <img src="{{ asset('images/icon2.jpg') }}" alt="">
+                                            <img src="{{ asset('images/icon1.jpg') }}" alt="">
                                         </span>
                                     </div>
                                 </div>
@@ -84,12 +84,12 @@
                             </div>
                         </div>
 
-                        <div class="col-4">
+                        <div class="col-lg-4 col-md-4 col-sm-12 mt-3">
                             <div class="d-flex px-3 p-3" style="border: 1px solid black">
                                 <div>
                                     <div class="icon icon-sm icon-secondary">
                                         <span>
-                                            <img src="{{ asset('images/icon3.jpg') }}" alt="" style="width: 70px; height: 65px">
+                                            <img src="{{ asset('images/icon2.jpg') }}" alt="" >
                                         </span>
                                     </div>
                                 </div>
@@ -112,7 +112,7 @@
                     <div class="section-title">@lang('olympic.third_heading')</div>
                     <p class="mb-30">@lang('olympic.third_heading_desc')</p>
 
-                    <p class="mb-30">@lang('olympic.offred_text')</p>
+                    <p class="mb-30" style="font-weight: bolder; font-size: 20px">@lang('olympic.offred_text')</p>
 
                     <p class="mb-30">@lang('olympic.offer_1')</p>
                     <p class="mb-30">@lang('olympic.offer_2')</p>
@@ -121,6 +121,8 @@
                     <p class="mb-30">@lang('olympic.offer_5')</p>
 
                     <p class="mb-30">@lang('olympic.offer_footer')</p>
+
+                    <div class="butn-dark"> <a href="/{{app()->getLocale()}}/contact-us"><span>@lang('auth.learn_more')</span></a> </div>
                 </div>
             </div>
         </div>
