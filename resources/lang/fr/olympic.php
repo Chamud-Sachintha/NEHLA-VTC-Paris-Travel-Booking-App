@@ -21,22 +21,22 @@ return [
                                     pratique pour faciliter les déplacements pendant les Jeux olympiques de Paris 2024.
                                     Voici quelques avantages de cette option :",
 
-    "comfort_and_conv" => "1. **Confort et commodité** : Avec un chauffeur privé, vous pouvez éviter les tracas
+    "comfort_and_conv" => "<span style='font-weight: bolder'> 1. **Confort et commodité**:</span> Avec un chauffeur privé, vous pouvez éviter les tracas
                             liés à la recherche d'un taxi ou à l'utilisation des transports en commun. Vous serez
                             pris en charge directement à votre lieu de résidence ou à un endroit désigné, et vous
                             pourrez vous détendre et profiter du trajet en toute tranquillité.",
 
-    "reliability_and_punc" => "2. **Fiabilité et ponctualité** : Les chauffeurs de NEHLA VTC PARIS sont
+    "reliability_and_punc" => "<span style='font-weight: bolder'> 2. **Fiabilité et ponctualité** : </span> Les chauffeurs de NEHLA VTC PARIS sont
                                 professionnels et expérimentés, garantissant des services fiables et ponctuels. Vous
                                 pouvez compter sur eux pour arriver à l'heure et pour vous déplacer efficacement
                                 vers votre destination, que ce soit un site olympique, un restaurant ou un hôtel.",
 
-    "shedule_flexibility" => "3. **Schedule flexibility**: By booking in advance, you can plan your trips according
+    "shedule_flexibility" => "<span style='font-weight: bolder'> 3. **Schedule flexibility**: </span> By booking in advance, you can plan your trips according
                                 to your schedule and preferences. Whether you need transportation early in the
                                 morning, late at night or even in the middle of the night, NEHLA VTC PARIS can
                                 meet your needs.",
 
-    "personalized_service" => "4. **Service personnalisé** : Les chauffeurs privés offrent un service personnalisé
+    "personalized_service" => "<span style='font-weight: bolder'> 4. **Service personnalisé** : </span> Les chauffeurs privés offrent un service personnalisé
                                     adapté à vos besoins spécifiques. Que vous voyagiez seul, en famille ou en groupe,
                                     NEHLA VTC PARIS peut fournir des véhicules de différentes tailles pour répondre à
                                     vos besoins en matière de capacité et de confort.",

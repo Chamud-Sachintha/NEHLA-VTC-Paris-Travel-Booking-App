@@ -104,10 +104,12 @@
                     <p class="mb-30">@lang('olympic.second_heading_desc')</p>
                     <p class="mb-30">@lang('olympic.second_heading_second_desc')</p>
 
-                    <p class="mb-30">@lang('olympic.comfort_and_conv')</p>
-                    <p class="mb-30">@lang('olympic.reliability_and_punc')</p>
-                    <p class="mb-30">@lang('olympic.shedule_flexibility')</p>
-                    <p class="mb-30">@lang('olympic.personalized_service')</p>
+                    <div class="ms-5">
+                        <p class="mb-30">@lang('olympic.comfort_and_conv')</p>
+                        <p class="mb-30">@lang('olympic.reliability_and_punc')</p>
+                        <p class="mb-30">@lang('olympic.shedule_flexibility')</p>
+                        <p class="mb-30">@lang('olympic.personalized_service')</p>
+                    </div>
 
                     <div class="section-title">@lang('olympic.third_heading')</div>
                     <p class="mb-30">@lang('olympic.third_heading_desc')</p>

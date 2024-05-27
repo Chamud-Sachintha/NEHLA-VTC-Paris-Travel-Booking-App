@@ -21,22 +21,22 @@ return [
                                     facilitate travel during the Paris 2024 Olympic Games. Here are some advantages of
                                     this option:",
 
-    "comfort_and_conv" => "1.**Comfort and convenience**: With a private driver, you can avoid the hassle of
+    "comfort_and_conv" => "<span style='font-weight: bolder'> 1.**Comfort and convenience**: </span> With a private driver, you can avoid the hassle of
                         finding a taxi or using public transportation. You will be picked up directly from your
                         place of residence or a designated location, and you can relax and enjoy the journey
                         in peace.",
 
-    "reliability_and_punc" => "2.**Reliability and punctuality**: NEHLA VTC PARIS drivers are professional and
+    "reliability_and_punc" => "<span style='font-weight: bolder'> 2.**Reliability and punctuality**: </span> NEHLA VTC PARIS drivers are professional and
                         experienced, guaranteeing reliable and punctual services. You can count on them to
                         arrive on time and get you to your destination efficiently, whether it's an Olympic
                         venue, restaurant or hotel.",
 
-    "shedule_flexibility" => "3. **Schedule flexibility**: By booking in advance, you can plan your trips according
+    "shedule_flexibility" => "<span style='font-weight: bolder'> 3. **Schedule flexibility**: </span> By booking in advance, you can plan your trips according
                                 to your schedule and preferences. Whether you need transportation early in the
                                 morning, late at night or even in the middle of the night, NEHLA VTC PARIS can
                                 meet your needs.",
 
-    "personalized_service" => "4. **Personalized service**: Private drivers offer a personalized service tailored to
+    "personalized_service" => "<span style='font-weight: bolder'> 4. **Personalized service**: </span> Private drivers offer a personalized service tailored to
                                 your specific needs. Whether you are traveling alone, with family or in a group,
                                 NEHLA VTC PARIS can provide vehicles of different sizes to meet your capacity and
                                 comfort needs.",
