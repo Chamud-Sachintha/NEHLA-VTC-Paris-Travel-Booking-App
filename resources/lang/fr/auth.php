@@ -99,6 +99,7 @@ return [
     'conf_pswd'=>'Confirmez le mot de passe',
     'user_email'=>'Courriel de l\'utilisateur',
     'pay_online_btn'=>'Payer en ligne',
+    'pay_cash' => 'PAYER EN ESPÈCES AU CHAUFFEUR',
     'next'=>'Suivant',
     'previous'=>'Précédent',
     'manage_bookings'=>'Gérer les réservations',

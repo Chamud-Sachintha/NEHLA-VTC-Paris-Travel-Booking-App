@@ -33,6 +33,7 @@ class CreateOrderDetailsTable extends Migration
             $table->string('booster_seats');
             $table->string('wheel_chairs');
             $table->string('total_price');
+            $table->string('pay_type');          // 1 - online 2 - cash
             $table->string('payment_status');
             $table->string('order_status');
 

@@ -97,6 +97,7 @@ return [
     'conf_pswd'=>'Confirm Password',
     'user_email'=>'User Email',
     'pay_online_btn'=>'Pay Online',
+    'pay_cash' => 'PAY CASH TO THE DRIVER',
     'next'=>'Next Step',
     'previous'=>'Prevoius',
     'manage_bookings'=>'Manage Bookings',

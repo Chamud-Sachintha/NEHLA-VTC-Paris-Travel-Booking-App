@@ -31,10 +31,11 @@ return [
                                 pouvez compter sur eux pour arriver à l'heure et pour vous déplacer efficacement
                                 vers votre destination, que ce soit un site olympique, un restaurant ou un hôtel.",
 
-    "shedule_flexibility" => "<span style='font-weight: bolder'> 3. **Schedule flexibility**: </span> By booking in advance, you can plan your trips according
-                                to your schedule and preferences. Whether you need transportation early in the
-                                morning, late at night or even in the middle of the night, NEHLA VTC PARIS can
-                                meet your needs.",
+    "shedule_flexibility" => "<span style='font-weight: bolder'> 3. **Flexibilité des horaires** : </span> En réservant à l'avance, vous pouvez planifier vos
+                                déplacements selon votre emploi du temps et vos préférences. Que vous ayez
+                                besoin d'un transport tôt le matin, tard le soir ou même au milieu de la nuit, NEHLA
+                                VTC PARIS peut répondre à vos besoins.
+                                ",
 
     "personalized_service" => "<span style='font-weight: bolder'> 4. **Service personnalisé** : </span> Les chauffeurs privés offrent un service personnalisé
                                     adapté à vos besoins spécifiques. Que vous voyagiez seul, en famille ou en groupe,
@@ -51,22 +52,22 @@ return [
                             temps passé à profiter des Jeux et de minimiser le stress des déplacements.",
 
     "offred_text" => "Voici quelques-uns des services proposés :",
-    "offer_1" => "1. Transferts depuis et vers les aéroports : NEHLA VTC PARIS assure des transferts
+    "offer_1" => "<span style='font-weight: bolder'> 1. Transferts depuis et vers les aéroports : </span> NEHLA VTC PARIS assure des transferts
                     depuis les principaux aéroports parisiens (Charles de Gaulle, Orly, etc.) vers les
                     hôtels, les sites olympiques ou toute autre destination souhaitée.",
-    "offer_2" => "2. Navettes vers les sites olympiques : Pour ceux qui assistent aux compétitions ou
+    "offer_2" => "<span style='font-weight: bolder'> 2. Navettes vers les sites olympiques : </span> Pour ceux qui assistent aux compétitions ou
                     aux événements olympiques, NEHLA VTC PARIS propose des navettes vers les
                     différents sites olympiques, offrant un moyen pratique et fiable de se déplacer entre
                     les lieux de compétition.",
-    "offer_3" => "3. Transferts personnalisés : Que ce soit pour des déplacements individuels, en
+    "offer_3" => "<span style='font-weight: bolder'> 3. Transferts personnalisés : </span> Que ce soit pour des déplacements individuels, en
                     groupe ou en famille, NEHLA VTC PARIS propose des transferts personnalisés
                     adaptés aux besoins spécifiques des clients, avec des options de véhicules variées
                     pour répondre à toutes les exigences de confort et de capacité.",
-    "offer_4" => "4. Disponibilité 24/7 : Pendant la durée des Jeux olympiques, NEHLA VTC PARIS
+    "offer_4" => "<span style='font-weight: bolder'> 4. Disponibilité 24/7 : </span> Pendant la durée des Jeux olympiques, NEHLA VTC PARIS
                     assure un service de transport disponible 24 heures sur 24, 7 jours sur 7, pour
                     répondre à tous les besoins de déplacement, que ce soit tôt le matin, tard le soir ou
                     même en pleine nuit.",
-    "offer_5" => "5. Chauffeurs professionnels et expérimentés : Les chauffeurs de NEHLA VTC
+    "offer_5" => "<span style='font-weight: bolder'> 5. Chauffeurs professionnels et expérimentés : </span> Les chauffeurs de NEHLA VTC
                     PARIS sont des professionnels expérimentés, familiarisés avec les routes de Paris
                     et offrant un service courtois et fiable pour garantir une expérience de voyage
                     agréable et sécurisée.",

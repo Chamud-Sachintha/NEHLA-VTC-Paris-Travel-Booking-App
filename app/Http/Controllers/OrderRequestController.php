@@ -14,7 +14,7 @@ class OrderRequestController extends Controller
         $order_details = DB::table('order_details')->select('order_details.id as order_id','order_details.from','order_details.to','order_details.total_price','clients.first_name', 'clients.last_name', 'clients.email', 'clients.mobile_number')
                             ->join('clients', 'order_details.customer_id', '=', 'clients.id')
                             ->where('order_status', 'pending')
-                            ->where('payment_status', 'paid')
+                            // ->where('payment_status', 'paid')
                             ->orderBy('order_details.created_at', 'DESC')
                             ->get();
         return view('order_requests')->with(['order_details'=>($order_details->toArray())]);

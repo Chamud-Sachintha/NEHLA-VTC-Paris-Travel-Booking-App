@@ -49,19 +49,19 @@ return [
                             to maximize time spent enjoying the Games and minimize travel stress.",
 
     "offred_text" => "Here are some of the services offered:",
-    "offer_1" => "1. Transfers from and to airports: NEHLA VTC PARIS provides transfers from the
+    "offer_1" => "<span style='font-weight: bolder'> 1. Transfers from and to airports: </span> NEHLA VTC PARIS provides transfers from the
                     main Paris airports (Charles de Gaulle, Orly, etc.) to hotels, Olympic sites or any
                     other desired destination.",
-    "offer_2" => "2. Shuttles to Olympic venues: For those attending Olympic competitions or events,
+    "offer_2" => "<span style='font-weight: bolder'> 2. Shuttles to Olympic venues: </span> For those attending Olympic competitions or events,
                     NEHLA VTC PARIS offers shuttles to the various Olympic venues, providing a
                     convenient and reliable way to travel between competition venues",
-    "offer_3" => "3. Personalized transfers: Whether for individual, group or family trips, NEHLA VTC
+    "offer_3" => "<span style='font-weight: bolder'> 3. Personalized transfers: </span> Whether for individual, group or family trips, NEHLA VTC
                     PARIS offers personalized transfers adapted to the specific needs of customers, with
                     varied vehicle options to meet all comfort and capacity requirements .",
-    "offer_4" => "4. Availability 24/7: During the Olympic Games, NEHLA VTC PARIS provides a
+    "offer_4" => "<span style='font-weight: bolder'> 4. Availability 24/7: </span> During the Olympic Games, NEHLA VTC PARIS provides a
                     transport service available 24 hours a day, 7 days a week, to meet all travel needs,
                     whether early in the morning or late in the evening or even in the middle of the night.",
-    "offer_5" => "5. Professional and experienced drivers: NEHLA VTC PARIS drivers are
+    "offer_5" => "<span style='font-weight: bolder'> 5. Professional and experienced drivers: </span> NEHLA VTC PARIS drivers are
                     experienced professionals, familiar with the roads of Paris and offering a courteous
                     and reliable service to guarantee a pleasant and safe travel experience.",
     "offer_footer" => "By offering these private transport services, NEHLA VTC PARIS aims to offer visitors

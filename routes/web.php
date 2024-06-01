@@ -56,6 +56,8 @@ Route::post('ajaxRequest', [ClientController::class, 'addNewClientDetails'])->na
 
 Route::get('/en/success', [StripeController::class, 'success'])->name('checkout.success');
 
+Route::get('/en/cash/success', [StripeController::class, 'cashSuccess'])->name('cashCheckout.success');
+
 Route::get('/en/cancel', [StripeController::class, 'removeUnpaidTransactionsFromTable'])->name('cancel');
 
 Route::get('/en/signin', [AdminController::class, 'showLoginPage']);

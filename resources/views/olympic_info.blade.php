@@ -115,12 +115,14 @@
                     <p class="mb-30">@lang('olympic.third_heading_desc')</p>
 
                     <p class="mb-30" style="font-weight: bolder; font-size: 20px">@lang('olympic.offred_text')</p>
-
-                    <p class="mb-30">@lang('olympic.offer_1')</p>
-                    <p class="mb-30">@lang('olympic.offer_2')</p>
-                    <p class="mb-30">@lang('olympic.offer_3')</p>
-                    <p class="mb-30">@lang('olympic.offer_4')</p>
-                    <p class="mb-30">@lang('olympic.offer_5')</p>
+                    
+                    <div class="ms-5">
+                        <p class="mb-30">@lang('olympic.offer_1')</p>
+                        <p class="mb-30">@lang('olympic.offer_2')</p>
+                        <p class="mb-30">@lang('olympic.offer_3')</p>
+                        <p class="mb-30">@lang('olympic.offer_4')</p>
+                        <p class="mb-30">@lang('olympic.offer_5')</p>
+                    </div>
 
                     <p class="mb-30">@lang('olympic.offer_footer')</p>
 

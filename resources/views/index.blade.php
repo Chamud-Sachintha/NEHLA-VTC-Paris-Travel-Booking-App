@@ -317,6 +317,19 @@
             box-shadow: 0px 5px 15px rgb(0 0 0 / 5%);
         }
 
+        .paymentByCashBtn {
+            font-weight: 400;
+            font-family: 'Gilda Display', serif;
+            text-transform: uppercase;
+            background: #aa8453;
+            color: #fff;
+            padding: 8px 24px;
+            margin: 0;
+            position: relative;
+            font-size: 15px;
+            letter-spacing: 3px;
+        }
+
         option:hover {
             background-color: #8E6F45;
         }
@@ -1030,8 +1043,13 @@
                                             </div>
                                             <div class="row mt-3">
                                                 <div class="col-md-6 col-lg-6 col-sm-12">
-                                                    <input type="submit" class="btn btn-primary btn-sm"
+                                                    <input type="submit" onclick="addPaymentType('1') class="btn btn-primary btn-sm"
                                                         value="@lang('auth.pay_online_btn')">
+                                                </div>
+                                                <div class="col-md-6 col-lg-6 col-sm-12">
+                                                    <input type="hidden" value="" name="payType" id="payTypeAdd">
+                                                    <input type="submit" onclick="addPaymentType('2')" class="paymentByCashBtn"
+                                                        value="@lang('auth.pay_cash')">
                                                 </div>
                                             </div>
                                         </div>
@@ -1361,6 +1379,14 @@
                     document.getElementById("placeAmountFirst").innerHTML = "@lang('auth.price') : " + data.success;
                 }
             });
+        }
+
+        function addPaymentType(payType) {
+
+            var getPayTypeEl = document.getElementById("payTypeAdd");
+            getPayTypeEl.value = payType;
+
+            return false;
         }
 
         // validations starts
