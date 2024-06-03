@@ -192,4 +192,6 @@ return [
     'p13' => 'Content of the Site www.nehlavtcparis.com:',
     'p14' => 'The content of the site www.nehlavtcparis.com, the general structure, the texts, the images, animated or not, and the sounds of which it is composed are the exclusive property of the company NEHLA VTC PARIS. Any total or partial use of the website www.nehlavtcparis.com, by any means whatsoever, is prohibited and would constitute an infringement punishable by articles L.335-2 and following of the Intellectual Property Code.',
     'p15' => 'All rights reserved © 2022 NEHLA VTC PARIS',
+
+    'condition_destination' => 'Select Destination Before Passengers.'
 ];

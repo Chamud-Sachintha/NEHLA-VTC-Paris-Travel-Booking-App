@@ -193,4 +193,6 @@ return [
     'p13' => 'Contenu du Site www.nehlavtcparis.com:',
     'p14' => 'Le contenu du site www.nehlavtcparis.com, la structure générale, les textes, les images, animées ou non, et les sons dont il est composé sont la propriété exclusive de la société NEHLA VTC PARIS. Toute exploitation totale ou partielle du site Internet www.nehlavtcparis.com, par quelques procédés que ce soient, est interdite et constituerait une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la Propriété intellectuelle.',
     'p15' => 'Tous droits réservés © 2022 NEHLA VTC PARIS',
+
+    'condition_destination' => 'Sélectionnez Destination avant les passagers.'
 ];

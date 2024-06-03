@@ -547,6 +547,13 @@
                                     <fieldset>
                                         <div class="form-card">
                                             <div class="row">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="alert alert-primary"  role="alert">
+                                                            • @lang('auth.condition_destination')
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="col-md-6 col-lg-6 col-sm-12">
                                                     <h2 class="fs-title">@lang('auth.your_jurney')</h2>
 
@@ -611,7 +618,7 @@
                                                             <label for="">@lang('auth.passengers') :</label>
                                                             {{-- <input type="text" class="form-control" placeholder="Ex. 3"
                                                                 id="passengers" name="passengers"> --}}
-                                                            <select class="form-select" aria-label="Default select example"
+                                                            <select class="form-select" aria-label="Default select example" disabled
                                                                 style="height: 2.5rem" id="passengers" name="passengers" onchange="onSelectPassengerRange()">
                                                                 <option value="0" selected>Select Passengers</option>
                                                                 <option value="1 à 3">1 à 3</option>
@@ -1362,7 +1369,8 @@
         });
 
         function onSelectPassengerRange() {
-            var toPlace
+            var toPlace;
+
             if (isSet == 0) {
                 toPlace = document.getElementById("to").value;
             } else {
@@ -1507,6 +1515,10 @@
                 toPlace = document.getElementById("to").value;
             } else {
                 toPlace = document.getElementById("from").value;
+            }
+
+            if (toPlace != 0) {
+                document.getElementById("passengers").disabled = false;
             }
 
             // $.ajax({
