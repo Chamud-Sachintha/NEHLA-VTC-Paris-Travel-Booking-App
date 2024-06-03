@@ -43,7 +43,7 @@
         <i class="checkmark">✓</i>
       </div>
         <h1>Success</h1> 
-        <p>We received your purchase request</p>
+        <p>please pay your payments for driver</p>
         <div class="row">
             <div class="card">
                 <div class="card-body">
